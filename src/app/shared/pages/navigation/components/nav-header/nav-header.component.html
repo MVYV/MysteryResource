@@ -1,0 +1,61 @@
+<mat-toolbar>
+    <div fxHide.gt-xs  class="sideNavBtn">
+        <button mat-icon-button (click)="onToggleSideNav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a routerLink="/" class="site-name">
+            <span>Комфорт-Дім</span>
+        </a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a routerLink="" class="nav-link">
+<!--                    <fa-icon [icon]="faTools"></fa-icon>-->
+                    <span class="nav-text">Послуги</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="" class="nav-link">
+<!--                    <fa-icon [icon]="faFileSignature"></fa-icon>-->
+                    <span class="nav-text">Контакти</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="" class="nav-link">
+<!--                    <fa-icon [icon]="faInfoCircle"></fa-icon>-->
+                    <span class="nav-text">Інформація</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="" class="nav-link">
+<!--                    <fa-icon [icon]="faQuestionCircle"></fa-icon>-->
+                    <span class="nav-text">Запитання</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="" class="nav-link">
+<!--                    <fa-icon [icon]="faBell"></fa-icon>-->
+                    <span class="nav-text">Оголошення</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="" class="nav-link-icon">
+<!--                    <fa-icon [icon]="faCog"></fa-icon>-->
+                </a>
+            </li>
+            <li >
+                <a routerLink="" class="nav-link-icon">
+<!--                    <fa-icon [icon]="faSignInAlt"></fa-icon>-->
+                </a>
+            </li>
+            <li>
+                <a routerLink="" class="nav-link-icon">
+<!--                    <fa-icon [icon]="faSignOutAlt"></fa-icon>-->
+                </a>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>

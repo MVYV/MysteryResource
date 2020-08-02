@@ -1,0 +1,39 @@
+$darkSiteColor: #403121;
+$lightSiteColor: #ed9728;
+$veryLightSiteColor: #ffbc49;
+$ultraLightSiteColor: #ffffbf;
+$middleSiteColor: #a65e09;
+$blackSiteColor: #000000;
+$whiteSiteColor: #ffffff;
+
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav
+{
+    height: 100%;
+}
+mat-sidenav
+{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: $veryLightSiteColor;
+}
+main
+{
+    margin-top: 84px;
+}
+mat-sidenav-content
+{
+    background-image: url('/assets/backgrounds/city-main-background1.png');
+    background-size: auto 100vh;
+    background-attachment: fixed;
+}
+@media screen and (max-width: 800px)
+{
+    mat-sidenav-content
+    {
+        background-image: url('/assets/backgrounds/city-main-background.png');
+    }
+}
