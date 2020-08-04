@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-header',
-  templateUrl: './nav-header.component.html',
-  styleUrls: ['./nav-header.component.scss']
+    selector: 'app-nav-header',
+    templateUrl: './nav-header.component.html',
+    styleUrls: ['./nav-header.component.scss']
 })
 export class NavHeaderComponent implements OnInit {
 
-  constructor() { }
+    @Output() public sideNavToggle = new EventEmitter();
 
-  ngOnInit(): void {
-  }
+    constructor() { }
+
+    ngOnInit(): void {
+    }
+
+    public onToggleSideNav = () => {
+        this.sideNavToggle.emit();
+    };
 
 }

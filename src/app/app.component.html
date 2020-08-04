@@ -1,2 +1,13 @@
-
-<router-outlet></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sideNav role="navigation" class="side-menu">
+        <app-nav-sidebar (sideNavClose)="sideNav.close();"></app-nav-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-nav-header (sideNavToggle)="sideNav.toggle();"></app-nav-header>
+        <app-nav-sidenav></app-nav-sidenav>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+<!--        <app-footer></app-footer>-->
+    </mat-sidenav-content>
+</mat-sidenav-container>
