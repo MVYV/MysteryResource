@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 
 // Primeng modules
 import { AccordionModule } from 'primeng/accordion';
+import { ClarityModule } from '@clr/angular';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { AccordionModule } from 'primeng/accordion';
         MatSidenavModule,
         MatSelectModule,
         MatListModule,
-        AccordionModule
+        AccordionModule,
+        ClarityModule
     ],
     providers: [],
     bootstrap: [AppComponent]

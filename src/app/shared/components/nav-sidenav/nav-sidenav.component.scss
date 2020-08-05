@@ -1,5 +1,67 @@
+::ng-deep {
+
+    .clr-accordion-inner-content {
+        background-color: green;
+        border: none;
+    }
+    .clr-accordion-content {
+        border: none;
+    }
+    .clr-accordion-panel:last-child {
+        border: none;
+    }
+    .clr-accordion-header {
+        background-color: brown;
+        border: none;
+    }
+    .clr-accordion-header:hover {
+        background-color: brown;
+    }
+    .clr-accordion-header:focus {
+        outline: none;
+    }
+    .clr-accordion-header-button:focus {
+        outline: none;
+    }
+    .clr-accordion-panel:last-child .clr-accordion-content, .clr-accordion-panel:last-child .clr-accordion-header {
+        border: none;
+    }
+    .clr-accordion-panel-open .clr-accordion-header {
+        background-color: brown;
+    }
+}
+
 .vertical-nav {
     width: 250px;
     height: 100%;
     background-color: rebeccapurple;
+
+    .vertical-nav-accordion {
+
+        .vertical-nav-accordion-panel {
+
+
+            .vertical-nav-block-title {
+
+
+            }
+
+            .vertical-nav-block-title:focus {
+                box-shadow: none;
+            }
+
+            .vertical-nav-block {
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+
+                .vertical-nav-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
+

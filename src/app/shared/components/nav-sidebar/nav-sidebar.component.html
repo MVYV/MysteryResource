@@ -1,27 +1,2 @@
 <mat-icon class="close-sidenav" (click)="onSideNavClose();">close</mat-icon>
-<mat-nav-list>
-    <a mat-list-item routerLink="/services" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Послуги</span>
-    </a>
-    <a mat-list-item routerLink="/contacts" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Контакти</span>
-    </a>
-    <a mat-list-item routerLink="/" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Інформація</span>
-    </a>
-    <a mat-list-item routerLink="/questions" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Запитання</span>
-    </a>
-    <a mat-list-item routerLink="/notifications" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Оголошення</span>
-    </a>
-    <a mat-list-item routerLink="/dashboard" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Адміністрування</span>
-    </a>
-    <a mat-list-item routerLink="/login" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Вхід</span>
-    </a>
-    <a mat-list-item routerLink="/logout" class="side-nav-item" (click)="onSideNavClose();">
-        <span class="nav-caption">Вихід</span>
-    </a>
-</mat-nav-list>
+<app-nav-sidenav (click)="onSideNavClose();"></app-nav-sidenav>

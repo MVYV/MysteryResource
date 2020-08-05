@@ -1,13 +1,36 @@
 <div class="vertical-nav">
-    <p-accordion>
-        <p-accordionTab header="Header 1">
-            Content 1
-        </p-accordionTab>
-        <p-accordionTab header="Header 2">
-            Content 2
-        </p-accordionTab>
-        <p-accordionTab header="Header 3">
-            Content 3
-        </p-accordionTab>
-    </p-accordion>
+    <clr-accordion class="vertical-nav-accordion">
+        <clr-accordion-panel class="vertical-nav-accordion-panel">
+            <clr-accordion-title class="vertical-nav-block-title">Футбол</clr-accordion-title>
+            <div class="vertical-nav-block">
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Англія</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Італія</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Німеччина</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Україна</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Іспанія</clr-accordion-content>
+            </div>
+        </clr-accordion-panel>
+
+        <clr-accordion-panel class="vertical-nav-accordion-panel">
+            <clr-accordion-title class="vertical-nav-block-title">Баскетбол</clr-accordion-title>
+            <div class="vertical-nav-block">
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Греція</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Італія</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Туреччина</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Україна</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Іспанія</clr-accordion-content>
+            </div>
+        </clr-accordion-panel>
+
+        <clr-accordion-panel class="vertical-nav-accordion-panel">
+            <clr-accordion-title class="vertical-nav-block-title">Хокей</clr-accordion-title>
+            <div class="vertical-nav-block">
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Швеція</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Фінляндія</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Німеччина</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Швейцарія</clr-accordion-content>
+                <clr-accordion-content class="vertical-nav-item" *clrIfExpanded>Чехія</clr-accordion-content>
+            </div>
+        </clr-accordion-panel>
+    </clr-accordion>
 </div>
