@@ -1,3 +1,11 @@
-.header-spacer {
-    flex: 1 1 auto;
+$colorBright: #62af82;
+$colorLight: #ffffff;
+$colorDark: #131418;
+
+.global-header {
+    background-color: $colorBright;
+    color: $colorLight;
+    .header-spacer {
+        flex: 1 1 auto;
+    }
 }

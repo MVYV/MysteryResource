@@ -1,7 +1,11 @@
+$colorBright: #62af82;
+$colorLight: #ffffff;
+$colorDark: #131418;
+
 ::ng-deep {
 
     .clr-accordion-inner-content {
-        background-color: green;
+        background-color: $colorBright;
         border: none;
     }
     .clr-accordion-content {
@@ -11,30 +15,41 @@
         border: none;
     }
     .clr-accordion-header {
-        background-color: brown;
+        background-color: $colorBright;
         border: none;
     }
     .clr-accordion-header:hover {
-        background-color: brown;
+        background-color: $colorBright;
     }
     .clr-accordion-header:focus {
         outline: none;
     }
+    .clr-accordion-header-button {
+        color: $colorLight;
+    }
     .clr-accordion-header-button:focus {
         outline: none;
+        color: $colorDark;
     }
     .clr-accordion-panel:last-child .clr-accordion-content, .clr-accordion-panel:last-child .clr-accordion-header {
         border: none;
     }
+    .clr-accordion:not(.clr-stepper-forms) .clr-accordion-panel:last-child .clr-accordion-header,
+    .clr-accordion:not(.clr-stepper-forms) .clr-accordion-panel:first-child .clr-accordion-header {
+        border-radius: 0;
+    }
     .clr-accordion-panel-open .clr-accordion-header {
-        background-color: brown;
+        background-color: $colorLight;
+    }
+    .clr-accordion-panel-open .clr-accordion-header-button {
+        color: $colorDark;
     }
 }
 
 .vertical-nav {
-    width: 250px;
+    width: 200px;
     height: 100%;
-    background-color: rebeccapurple;
+    background-color: $colorBright;
 
     .vertical-nav-accordion {
 

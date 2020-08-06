@@ -5,6 +5,7 @@
 //    height: 100%;
 //}
 .sidenav-container {
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -15,4 +16,9 @@
 .side-menu {
     //width: 100%;
     background-color: black;
+}
+.global-wrapper {
+    display: flex;
+    align-content: stretch;
+    height: calc(100vh - 64px);
 }

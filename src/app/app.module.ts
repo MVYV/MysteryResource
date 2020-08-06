@@ -5,10 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Resource modules
+import { HomeModule } from './modules/home/home.module';
+import { FootballModule } from './modules/football/football.module';
+import { BasketballModule } from './modules/basketball/basketball.module';
+import { IceHockeyModule } from './modules/ice-hockey/ice-hockey.module';
+
 // Shared components
 import { NavHeaderComponent } from './shared/components/nav-header/nav-header.component';
 import { NavSidebarComponent } from './shared/components/nav-sidebar/nav-sidebar.component';
 import { NavSidenavComponent } from './shared/components/nav-sidenav/nav-sidenav.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 // Material modules
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,12 +35,17 @@ import { ClarityModule } from '@clr/angular';
         AppComponent,
         NavHeaderComponent,
         NavSidebarComponent,
-        NavSidenavComponent
+        NavSidenavComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        HomeModule,
+        FootballModule,
+        BasketballModule,
+        IceHockeyModule,
         MatToolbarModule,
         MatIconModule,
         MatButtonModule,
