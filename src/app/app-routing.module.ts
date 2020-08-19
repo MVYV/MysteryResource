@@ -28,6 +28,10 @@ const routes: Routes = [
                 path: 'technologies',
                 loadChildren: 'src/app/modules/technologies/technologies.module#TechnologiesModule'
             },
+            {
+                path: 'login',
+                loadChildren: 'src/app/modules/authentication/authentication.module#AuthenticationModule'
+            },
             { path: 'error', component: PageNotFoundComponent },
             { path: '**', redirectTo: 'error' }
         ]

@@ -14,6 +14,7 @@ import { NewsModule } from './modules/news/news.module';
 import { ReviewsModule } from './modules/reviews/reviews.module';
 import { TournamentsModule } from './modules/tournaments/tournaments.module';
 import { TechnologiesModule } from './modules/technologies/technologies.module';
+import { AuthenticationModule } from './modules/authentication/authentication.module';
 
 // Shared components
 import { NavHeaderComponent } from './shared/components/nav-header/nav-header.component';
@@ -52,6 +53,7 @@ import { ClarityModule } from '@clr/angular';
         ReviewsModule,
         TournamentsModule,
         TechnologiesModule,
+        AuthenticationModule,
         MatToolbarModule,
         MatIconModule,
         MatButtonModule,

@@ -74,6 +74,11 @@ $colorBrightLight: #c28f2c;
             align-items: center;
             justify-content: center;
             padding: 0 5px;
+            -webkit-transition: all ease-in-out .3s;
+            -moz-transition: all ease-in-out .3s;
+            -ms-transition: all ease-in-out .3s;
+            -o-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
 
             &:hover {
                 background-color: $colorDark;
