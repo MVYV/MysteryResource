@@ -4,10 +4,28 @@
     </button>
     <span>Спортивний Ресурс</span>
     <span class="header-spacer"></span>
-    <button mat-icon-button class="header-icon favorite-icon" aria-label="">
-        <mat-icon>share</mat-icon>
-    </button>
-    <button mat-icon-button class="header-icon" aria-label="">
-        <mat-icon>login</mat-icon>
-    </button>
+    <div class="header-nav">
+        <a mat-button routerLink="home" [routerLinkActive]="'activeRoute'">
+<!--            <fa-icon [icon]="faHome" class="header-nav-icon"></fa-icon>-->
+        </a>
+        <a mat-button routerLink="news" [routerLinkActive]="'activeRoute'">
+<!--            <fa-icon [icon]="faGlobe" class="header-nav-object-icon"></fa-icon>-->
+            <span class="header-nav-object-name transitionStyle">News</span>
+        </a>
+        <a mat-button routerLink="reviews" [routerLinkActive]="'activeRoute'">
+<!--            <fa-icon [icon]="faSun" class="header-nav-object-icon"></fa-icon>-->
+            <span class="header-nav-object-name transitionStyle">Reviews</span>
+        </a>
+        <a mat-button routerLink="tournaments" [routerLinkActive]="'activeRoute'">
+<!--            <fa-icon [icon]="faMoon" class="header-nav-object-icon"></fa-icon>-->
+            <span class="header-nav-object-name transitionStyle">Tournaments</span>
+        </a>
+        <a mat-button routerLink="technologies" [routerLinkActive]="'activeRoute'">
+<!--            <fa-icon [icon]="faFan" class="header-nav-object-icon"></fa-icon>-->
+            <span class="header-nav-object-name transitionStyle">Technologies</span>
+        </a>
+        <a mat-button class="dashboard-link" routerLink="dashboard" [routerLinkActive]="'activeRoute'">
+            <mat-icon class="dashboard-icon">apps</mat-icon>
+        </a>
+    </div>
 </mat-toolbar>

@@ -1,2 +1,12 @@
-<!--<mat-icon class="close-sidenav" (click)="onSideNavClose();">close</mat-icon>-->
-<app-nav-sidenav (click)="onSideNavClose();"></app-nav-sidenav>
+<mat-nav-list class="global-mat-nav-list">
+    <a mat-list-item class="global-mat-list-item" routerLink="home" [routerLinkActive]="'activeRoute1'"
+       [routerLinkActiveOptions]="{exact:true}" (click)="onSideNavClose();" tabindex="-1">News</a>
+    <a mat-list-item class="global-mat-list-item" routerLink="planets" [routerLinkActive]="'activeRoute1'"
+       (click)="onSideNavClose();" tabindex="-1">Reviews</a>
+    <a mat-list-item class="global-mat-list-item" routerLink="stars" [routerLinkActive]="'activeRoute1'"
+       (click)="onSideNavClose();" tabindex="-1">Tournaments</a>
+    <a mat-list-item class="global-mat-list-item" routerLink="satellites" [routerLinkActive]="'activeRoute1'"
+       (click)="onSideNavClose();" tabindex="-1">Technologies</a>
+    <a mat-list-item class="global-mat-list-item" routerLink="dashboard/overall" [routerLinkActive]="'activeRoute1'"
+       (click)="onSideNavClose();" tabindex="-1">Dashboard</a>
+</mat-nav-list>

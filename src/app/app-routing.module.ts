@@ -13,16 +13,20 @@ const routes: Routes = [
                 loadChildren: 'src/app/modules/home/home.module#HomeModule'
             },
             {
-                path: 'football',
-                loadChildren: 'src/app/modules/football/football.module#FootballModule'
+                path: 'news',
+                loadChildren: 'src/app/modules/news/news.module#NewsModule'
             },
             {
-                path: 'basketball',
-                loadChildren: 'src/app/modules/basketball/basketball.module#BasketballModule'
+                path: 'reviews',
+                loadChildren: 'src/app/modules/reviews/reviews.module#ReviewsModule'
             },
             {
-                path: 'ice-hockey',
-                loadChildren: 'src/app/modules/ice-hockey/ice-hockey.module#IceHockeyModule'
+                path: 'tournaments',
+                loadChildren: 'src/app/modules/tournaments/tournaments.module#TournamentsModule'
+            },
+            {
+                path: 'technologies',
+                loadChildren: 'src/app/modules/technologies/technologies.module#TechnologiesModule'
             },
             { path: 'error', component: PageNotFoundComponent },
             { path: '**', redirectTo: 'error' }
