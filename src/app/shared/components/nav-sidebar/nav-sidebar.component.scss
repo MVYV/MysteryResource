@@ -1,3 +1,17 @@
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
 .close-sidenav {
     color: white;
+}
+.global-mat-nav-list {
+
+    .global-mat-list-item {
+        color: $colorBrightLight;
+        font-family: 'Jura', sans-serif;
+        font-weight: 900;
+        font-size: 18px;
+    }
 }

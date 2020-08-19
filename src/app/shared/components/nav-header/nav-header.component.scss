@@ -1,11 +1,84 @@
-$colorBright: #62af82;
-$colorLight: #ffffff;
-$colorDark: #131418;
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
 
 .global-header {
     background-color: $colorBright;
     color: $colorLight;
+    font-family: 'Jura', sans-serif;
+    height: 100px;
+    position: relative;
+    //font-family: 'Philosopher', sans-serif;
+    //font-family: 'Play', sans-serif;
+
+    .header-icon {
+        color: $colorDark;
+    }
+
+    .header-global-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: $colorDark;
+        font-size: 32px;
+        font-weight: 900;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        padding-top: 0;
+    }
+
     .header-spacer {
         flex: 1 1 auto;
+    }
+
+    .header-nav {
+        color: $colorDark;
+        margin-right: 40px;
+
+        .header-nav-item {
+            text-decoration: none;
+            font-family: 'Jura', sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: $colorDark;
+            padding: 15px 15px 20px 15px;
+        }
+    }
+
+    .header-language-selector {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $colorBright;
+        color: $colorDark;
+        font-weight: 900;
+        font-size: 18px;
+        border-left: 1px solid $colorDark;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-left: 15px;
+
+        .header-language-item {
+            cursor: pointer;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5px;
+
+            &:hover {
+                background-color: $colorDark;
+                color: $colorBright;
+            }
+        }
     }
 }

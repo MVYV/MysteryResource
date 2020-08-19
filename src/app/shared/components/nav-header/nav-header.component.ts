@@ -13,7 +13,9 @@ export class NavHeaderComponent implements OnInit {
     constructor(private translateService: TranslateService) { }
 
     ngOnInit(): void {
-        localStorage.getItem('translationLanguage') ? this.setLanguage(localStorage.getItem('translationLanguage')) : this.setLanguage('ukr');
+        localStorage.getItem('translationLanguage')
+            ? this.setLanguage(localStorage.getItem('translationLanguage'))
+            : this.setLanguage('ukr');
     }
 
     public onToggleSideNav = () => {
