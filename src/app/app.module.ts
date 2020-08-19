@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,19 +29,26 @@ import { MatListModule } from '@angular/material/list';
 // Primeng modules
 import { AccordionModule } from 'primeng/accordion';
 import { ClarityModule } from '@clr/angular';
+import { TranslatePipe } from './pipes/translate/translate.pipe';
+import { TranslateService } from './services/translate/translate.service';
 
+export function setupTranslateFactory(service: TranslateService): Function {
+    return () => service.use('ukr');
+}
 
 @NgModule({
     declarations: [
         AppComponent,
         NavHeaderComponent,
         NavSidebarComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        TranslatePipe
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         HomeModule,
         NewsModule,
         ReviewsModule,
@@ -55,7 +63,18 @@ import { ClarityModule } from '@clr/angular';
         AccordionModule,
         ClarityModule
     ],
-    providers: [],
+    providers: [
+        TranslateService,
+        {
+            provide: APP_INITIALIZER,
+            useFactory: setupTranslateFactory,
+            deps: [TranslateService],
+            multi: true
+        }
+    ],
+    exports: [
+        TranslatePipe
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

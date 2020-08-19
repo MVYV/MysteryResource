@@ -10,22 +10,24 @@
         </a>
         <a mat-button routerLink="news" [routerLinkActive]="'activeRoute'">
 <!--            <fa-icon [icon]="faGlobe" class="header-nav-object-icon"></fa-icon>-->
-            <span class="header-nav-object-name transitionStyle">News</span>
+            <span class="header-nav-object-name transitionStyle">{{ 'NEWS' | translate }}</span>
         </a>
         <a mat-button routerLink="reviews" [routerLinkActive]="'activeRoute'">
 <!--            <fa-icon [icon]="faSun" class="header-nav-object-icon"></fa-icon>-->
-            <span class="header-nav-object-name transitionStyle">Reviews</span>
+            <span class="header-nav-object-name transitionStyle">{{ 'REVIEWS' | translate}}</span>
         </a>
         <a mat-button routerLink="tournaments" [routerLinkActive]="'activeRoute'">
 <!--            <fa-icon [icon]="faMoon" class="header-nav-object-icon"></fa-icon>-->
-            <span class="header-nav-object-name transitionStyle">Tournaments</span>
+            <span class="header-nav-object-name transitionStyle">{{ 'TOURNAMENTS' | translate}}</span>
         </a>
         <a mat-button routerLink="technologies" [routerLinkActive]="'activeRoute'">
 <!--            <fa-icon [icon]="faFan" class="header-nav-object-icon"></fa-icon>-->
-            <span class="header-nav-object-name transitionStyle">Technologies</span>
+            <span class="header-nav-object-name transitionStyle">{{ 'TECHNOLOGIES' | translate}}</span>
         </a>
         <a mat-button class="dashboard-link" routerLink="dashboard" [routerLinkActive]="'activeRoute'">
             <mat-icon class="dashboard-icon">apps</mat-icon>
         </a>
+        <span (click)="setLanguage('ukr'); pageReload()">UKR</span>
+        <span (click)="setLanguage('eng'); pageReload()">ENG</span>
     </div>
 </mat-toolbar>
