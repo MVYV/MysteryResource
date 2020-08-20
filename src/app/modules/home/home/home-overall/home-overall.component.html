@@ -1,1 +1,9 @@
-<p>home-overall works!</p>
+<p-carousel [value]="homeCarousel" [numVisible]="3" [numScroll]="3" [circular]="true" [autoplayInterval]="5000">
+    <ng-template let-item pTemplate="item">
+        <div class="technology-item">
+            <div class="technology-item-content">
+                <div>{{ item.name }}</div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

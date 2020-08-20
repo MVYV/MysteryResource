@@ -22,12 +22,17 @@ $colorBrightLight: #c28f2c;
         align-items: center;
         justify-content: center;
         height: 100%;
-        color: $colorDark;
+        color: $colorLight;
         font-size: 32px;
         font-weight: 900;
         padding-left: 15px;
         padding-bottom: 5px;
         padding-top: 0;
+
+        span {
+            color: $colorDark;
+            font-style: italic;
+        }
     }
 
     .header-spacer {
@@ -44,7 +49,7 @@ $colorBrightLight: #c28f2c;
             font-size: 20px;
             font-weight: 900;
             letter-spacing: 1px;
-            color: $colorDark;
+            color: $colorLight;
             padding: 15px 15px 20px 15px;
         }
     }
@@ -55,7 +60,7 @@ $colorBrightLight: #c28f2c;
         align-items: center;
         justify-content: center;
         background-color: $colorBright;
-        color: $colorDark;
+        color: $colorLight;
         font-weight: 900;
         font-size: 18px;
         border-left: 1px solid $colorDark;

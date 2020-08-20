@@ -1,0 +1,140 @@
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
+.technology-item {
+    width: 100%;
+
+    .technology-item-content {
+        height: 350px;
+        border: 1px solid $colorBright;
+        border-radius: 10px;
+        padding: 0 20px 20px 20px;
+        margin: 20px;
+        text-align: center;
+        position: relative;
+
+        .tech-official-url {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            font-size: 18px;
+            color: $colorBright;
+
+            &:hover {
+                color: $colorDark;
+            }
+        }
+
+        .tech-icon {
+            width: 100%;
+            height: 150px;
+            color: $colorBright;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-transition: all ease-in-out .5s;
+            -moz-transition: all ease-in-out .5s;
+            -ms-transition: all ease-in-out .5s;
+            -o-transition: all ease-in-out .5s;
+            transition: all ease-in-out .5s;
+
+            .angular-logo {
+                font-size: 104px;
+            }
+
+            .ts-logo {
+                font-size: 104px;
+            }
+
+            .html-logo {
+                font-size: 104px;
+                margin: 20px 0 0 0;
+            }
+
+            .css-logo {
+                font-size: 104px;
+                margin: 15px 0 0 20px;
+            }
+
+            .spring-logo {
+                font-size: 104px;
+                margin: 20px 0 0 5px;
+            }
+
+            .mysql-logo {
+                font-size: 104px;
+                margin: 15px 0 0 10px;
+            }
+
+            .java-logo {
+                font-size: 132px;
+                margin: 20px 0 0 60px;
+            }
+
+            .html-logo {
+                font-size: 104px;
+                margin: 10px 0 0 20px;
+            }
+
+            .js-logo {
+                font-size: 136px;
+                margin: 5px 0 0 40px;
+            }
+
+            .sass-logo {
+                font-size: 124px;
+                margin: 15px 0 0 10px;
+            }
+
+            .tomcat-logo {
+                font-size: 104px;
+                margin: 20px 0 0 0;
+            }
+        }
+
+        .tech-description {
+            font-family: 'Comfortaa', sans-serif;
+            padding-top: 20px;
+
+            .tech-desc {
+                .tech-desc-text {
+                    .tech-title {
+                        margin-bottom: 10px;
+                        color: $colorDark;
+                        font-size: 22px;
+                        font-weight: 900;
+
+                        @media screen and (max-width: 414px) {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .tech-info {
+                        color: $colorBright;
+                        font-size: 16px;
+                        line-height: 22px;
+
+                        @media screen and (max-width: 500px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            height: 400px;
+        }
+
+        @media screen and (max-width: 500px) {
+            height: auto;
+        }
+
+        @media screen and (max-width: 478px) {
+            border: none;
+        }
+    }
+}
