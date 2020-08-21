@@ -11,8 +11,12 @@ $colorBrightLight: #c28f2c;
     height: 100px;
     position: relative;
 
-    .header-icon {
-        color: $colorDark;
+    .header-menu-icon {
+        display: none;
+
+        @media screen and (max-width: 1024px) {
+            display: block;
+        }
     }
 
     .header-global-title {
@@ -30,6 +34,8 @@ $colorBrightLight: #c28f2c;
         span {
             color: $colorBright;
             font-style: italic;
+            font-family: 'Lobster', sans-serif;
+            font-weight: 900;
         }
     }
 
@@ -40,6 +46,10 @@ $colorBrightLight: #c28f2c;
     .header-nav {
         color: $colorDark;
         margin-right: 40px;
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
 
         .header-nav-item {
             text-decoration: none;
