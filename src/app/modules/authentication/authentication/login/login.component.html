@@ -1,6 +1,6 @@
 <div class="login-page-box">
     <div class="login-box">
-        <div class="login-form-box-header">{{ 'LOG_IN_' | translate }}</div>
+        <app-shared-box-header boxTitle="LOG_IN_"></app-shared-box-header>
         <div class="login-form-box">
             <form class="login-form" [formGroup]="logInForm" (ngSubmit)="submitLogIn()">
                 <mat-form-field class="login-form-field">

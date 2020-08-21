@@ -38,7 +38,6 @@ import { ClarityModule } from '@clr/angular';
         NavHeaderComponent,
         NavSidebarComponent,
         PageNotFoundComponent,
-
     ],
     imports: [
         BrowserModule,

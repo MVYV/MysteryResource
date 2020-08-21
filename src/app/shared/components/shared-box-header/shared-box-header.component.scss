@@ -1,0 +1,14 @@
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
+.shared-box-header {
+    width: 100%;
+    background-color: $colorDark;
+    color: $colorLight;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 20px;
+}
