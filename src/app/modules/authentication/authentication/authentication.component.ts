@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '../../../services/translate/translate.service';
 
 @Component({
-  selector: 'app-authentication',
-  templateUrl: './authentication.component.html',
-  styleUrls: ['./authentication.component.scss']
+    selector: 'app-authentication',
+    templateUrl: './authentication.component.html',
+    styleUrls: ['./authentication.component.scss']
 })
 export class AuthenticationComponent implements OnInit {
 
-  constructor() { }
+    constructor(private translateService: TranslateService) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.translateService.use(localStorage.getItem('translationLanguage'));
+    }
 
 }

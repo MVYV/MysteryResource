@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { TranslateService } from '../../../../services/translate/translate.service';
 
 @Component({
     selector: 'app-login',
@@ -20,17 +19,9 @@ export class LoginComponent implements OnInit {
         ]]
     });
 
-    constructor(private formBuilder: FormBuilder, private translateService: TranslateService) { }
+    constructor(private formBuilder: FormBuilder) { }
 
     ngOnInit(): void {
-        localStorage.getItem('translationLanguage')
-            ? this.setLanguage(localStorage.getItem('translationLanguage'))
-            : this.setLanguage('ukr');
-    }
-
-    public setLanguage(lang: string): void {
-        localStorage.setItem('translationLanguage', lang);
-        this.translateService.use(localStorage.getItem('translationLanguage'));
     }
 
     public submitLogIn(): void {
