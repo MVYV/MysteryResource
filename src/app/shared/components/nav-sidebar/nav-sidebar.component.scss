@@ -3,9 +3,37 @@ $colorLight: #f9f9ea;
 $colorDark: #111111;
 $colorBrightLight: #c28f2c;
 
-.close-sidenav {
-    color: white;
+.sidenav-box {
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+    .sidenav-menu-icon {
+        position: absolute;
+        left: 10px;
+        top: 32px;
+    }
+
+    .sidenav-global-title {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $colorLight;
+        font-family: 'Jura', sans-serif;
+        font-size: 32px;
+        font-weight: 900;
+        margin-left: 10px;
+
+        span {
+            color: $colorBright;
+            font-style: italic;
+            font-family: 'Lobster', sans-serif;
+            font-weight: 900;
+        }
+    }
 }
+
 .global-mat-nav-list {
 
     .global-mat-list-item {
