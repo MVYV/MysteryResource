@@ -4,5 +4,15 @@
   "REVIEWS": "Reviews",
   "TOURNAMENTS": "Tournaments",
   "TECHNOLOGIES": "Technologies",
-  "DASHBOARD": "Dashboard"
+  "DASHBOARD": "Dashboard",
+  "OR": "Or",
+  "REGISTER": "Register",
+  "LOG_IN": "Log In",
+  "LOG_IN_": "Log In",
+  "PASSWORD": "Password",
+  "EMAIL": "Email",
+  "PASSWORD_REQUIRED": "Password is required",
+  "EMAIL_REQUIRED": "Email is required",
+  "PASSWORD_ERROR": "Minimum password length is 8 symbols",
+  "EMAIL_ERROR": "Please enter a valid email address"
 }

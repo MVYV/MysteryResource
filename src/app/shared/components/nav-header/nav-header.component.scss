@@ -5,13 +5,11 @@ $colorBrightLight: #c28f2c;
 
 
 .global-header {
-    background-color: $colorBright;
+    background-color: $colorDark;
     color: $colorLight;
     font-family: 'Jura', sans-serif;
     height: 100px;
     position: relative;
-    //font-family: 'Philosopher', sans-serif;
-    //font-family: 'Play', sans-serif;
 
     .header-icon {
         color: $colorDark;
@@ -30,7 +28,7 @@ $colorBrightLight: #c28f2c;
         padding-top: 0;
 
         span {
-            color: $colorDark;
+            color: $colorBright;
             font-style: italic;
         }
     }
@@ -59,7 +57,7 @@ $colorBrightLight: #c28f2c;
         flex-flow: column;
         align-items: center;
         justify-content: center;
-        background-color: $colorBright;
+        background-color: $colorDark;
         color: $colorLight;
         font-weight: 900;
         font-size: 18px;
@@ -86,8 +84,8 @@ $colorBrightLight: #c28f2c;
             transition: all ease-in-out .3s;
 
             &:hover {
-                background-color: $colorDark;
-                color: $colorBright;
+                background-color: $colorBright;
+                color: $colorDark;
             }
         }
     }

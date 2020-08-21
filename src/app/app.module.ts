@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppSharedModule } from './shared/modules/app-shared/app-shared.module';
 
@@ -26,11 +27,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 
-// Primeng modules
-import { AccordionModule } from 'primeng/accordion';
 import { ClarityModule } from '@clr/angular';
 
 
@@ -47,6 +45,7 @@ import { ClarityModule } from '@clr/angular';
         AppRoutingModule,
         BrowserAnimationsModule,
         HttpClientModule,
+        FormsModule,
         AppSharedModule,
         HomeModule,
         NewsModule,
@@ -58,9 +57,7 @@ import { ClarityModule } from '@clr/angular';
         MatIconModule,
         MatButtonModule,
         MatSidenavModule,
-        MatSelectModule,
         MatListModule,
-        AccordionModule,
         ClarityModule
     ],
     providers: [],
