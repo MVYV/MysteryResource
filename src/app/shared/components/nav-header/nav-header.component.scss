@@ -92,6 +92,7 @@ $colorBrightLight: #c28f2c;
         color: $colorLight;
         font-weight: 900;
         font-size: 18px;
+        text-transform: uppercase;
         border-left: 1px solid $colorDark;
         height: 100%;
         position: absolute;
@@ -107,22 +108,32 @@ $colorBrightLight: #c28f2c;
             flex-flow: column;
             align-items: center;
             justify-content: center;
-            padding: 0 5px 1px;
+            padding: 0 10px 2px;
             -webkit-transition: all ease-in-out .3s;
             -moz-transition: all ease-in-out .3s;
             -ms-transition: all ease-in-out .3s;
             -o-transition: all ease-in-out .3s;
             transition: all ease-in-out .3s;
 
-            //&:hover {
-            //    background-color: $colorBright;
-            //    color: $colorLight;
-            //}
+            &:hover {
+                background-color: $colorBright;
+                color: $colorLight;
+            }
         }
 
         .header-language-item-active {
-            background-color: $colorBright;
-            color: $colorLight;
+            position: relative;
+
+            &::after {
+                content: '';
+                height: 2px;
+                position: absolute;
+                top: 29px;
+                left: 10px;
+                right: 10px;
+                background-color: $colorLight;
+                border-radius: 1px;
+            }
         }
     }
 }
