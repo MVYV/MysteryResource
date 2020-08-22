@@ -17,6 +17,90 @@
                         <span>{{ 'FIRST_NAME_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'LAST_NAME' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="lastNameControl"
+                           placeholder="{{ 'LAST_NAME' | translate }}" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('lastNameControl').hasError('minlength') && !registrationForm.get('lastNameControl').hasError('required')">
+                        <span>{{ 'LAST_NAME_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('lastNameControl').hasError('required')">
+                        <span>{{ 'LAST_NAME_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'USER_NAME' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="userNameControl"
+                           placeholder="{{ 'USER_NAME' | translate }}" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('userNameControl').hasError('minlength') && !registrationForm.get('userNameControl').hasError('required')">
+                        <span>{{ 'USER_NAME_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('userNameControl').hasError('required')">
+                        <span>{{ 'USER_NAME_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'EMAIL' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="emailControl"
+                           placeholder="yourmail@mail.com" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('emailControl').hasError('email') && !registrationForm.get('emailControl').hasError('required')">
+                        <span>{{ 'EMAIL_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('emailControl').hasError('required')">
+                        <span>{{ 'EMAIL_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'CITY' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="cityControl"
+                           placeholder="{{ 'CITY' | translate }}" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('cityControl').hasError('minlength') && !registrationForm.get('cityControl').hasError('required')">
+                        <span>{{ 'CITY_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('cityControl').hasError('required')">
+                        <span>{{ 'CITY_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'COUNTRY' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="countryControl"
+                           placeholder="{{ 'COUNTRY' | translate }}" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('countryControl').hasError('minlength') && !registrationForm.get('countryControl').hasError('required')">
+                        <span>{{ 'COUNTRY_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('countryControl').hasError('required')">
+                        <span>{{ 'COUNTRY_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'PASSWORD' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput type="password" formControlName="passwordControl"
+                           placeholder="{{ 'PASSWORD' | translate }}" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('passwordControl').hasError('minlength') && !registrationForm.get('passwordControl').hasError('required')">
+                        <span>{{ 'PASSWORD_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('passwordControl').hasError('required')">
+                        <span>{{ 'PASSWORD_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
             </form>
         </div>
     </div>
