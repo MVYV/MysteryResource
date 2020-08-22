@@ -14,24 +14,29 @@ $colorBrightLight: #c28f2c;
         top: 22px;
     }
 
-    .sidenav-global-title {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $colorLight;
-        font-family: 'Jura', sans-serif;
-        font-size: 32px;
-        font-weight: 900;
-        margin-left: 10px;
+    .sidenav-title-link {
+        text-decoration: none;
 
-        span {
-            color: $colorBright;
-            font-style: italic;
-            font-family: 'Lobster', sans-serif;
+        .sidenav-global-title {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $colorLight;
+            font-family: 'Jura', sans-serif;
+            font-size: 32px;
             font-weight: 900;
+            margin-left: 10px;
+
+            span {
+                color: $colorBright;
+                font-style: italic;
+                font-family: 'Lobster', sans-serif;
+                font-weight: 900;
+            }
         }
     }
+
 }
 
 .global-mat-nav-list {
@@ -41,5 +46,10 @@ $colorBrightLight: #c28f2c;
         font-family: 'Jura', sans-serif;
         font-weight: 900;
         font-size: 18px;
+    }
+
+    .active-sidebar-link {
+        background-color: $colorBrightLight;
+        color: $colorDark;
     }
 }

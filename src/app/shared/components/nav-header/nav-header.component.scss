@@ -19,23 +19,27 @@ $colorBrightLight: #c28f2c;
         }
     }
 
-    .header-global-title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        color: $colorLight;
-        font-size: 32px;
-        font-weight: 900;
-        padding-left: 15px;
-        padding-bottom: 5px;
-        padding-top: 0;
+    .header-title-link {
+        text-decoration: none;
 
-        span {
-            color: $colorBright;
-            font-style: italic;
-            font-family: 'Lobster', sans-serif;
+        .header-global-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: $colorLight;
+            font-size: 32px;
             font-weight: 900;
+            padding-left: 15px;
+            padding-bottom: 5px;
+            padding-top: 0;
+
+            span {
+                color: $colorBright;
+                font-style: italic;
+                font-family: 'Lobster', sans-serif;
+                font-weight: 900;
+            }
         }
     }
 
@@ -51,14 +55,31 @@ $colorBrightLight: #c28f2c;
             display: none;
         }
 
+        .active-header-link {
+            background-color: $colorBright;
+        }
+
+        .active-header-link {
+            color: $colorBright;
+        }
+
         .header-nav-item {
+            height: 80px;
+            border-radius: 0;
             text-decoration: none;
             font-family: 'Jura', sans-serif;
             font-size: 20px;
             font-weight: 900;
             letter-spacing: 1px;
             color: $colorLight;
-            padding: 15px 15px 20px 15px;
+            padding: 18px 15px 0;
+        }
+
+        .header-nav-item-icon {
+            font-size: 20px;
+            height: 80px;
+            padding: 18px 15px 0;
+            border-radius: 0;
         }
     }
 
@@ -95,7 +116,7 @@ $colorBrightLight: #c28f2c;
 
             &:hover {
                 background-color: $colorBright;
-                color: $colorDark;
+                color: $colorLight;
             }
         }
     }
