@@ -1,1 +1,23 @@
-<p>registration works!</p>
+<div class="registration-container">
+    <div class="registration-box">
+        <app-shared-box-header boxTitle="REGISTRATION"></app-shared-box-header>
+        <div class="registration-form-box">
+            <form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="submitRegistration()">
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'FIRST_NAME' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="firstNameControl"
+                           placeholder="{{ 'FIRST_NAME' | translate }}" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('firstNameControl').hasError('minlength') && !registrationForm.get('firstNameControl').hasError('required')">
+                        <span>{{ 'FIRST_NAME_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('firstNameControl').hasError('required')">
+                        <span>{{ 'FIRST_NAME_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+</div>

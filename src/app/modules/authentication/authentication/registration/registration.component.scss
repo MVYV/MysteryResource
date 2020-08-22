@@ -1,0 +1,95 @@
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
+.registration-container {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jura', sans-serif;
+
+    .registration-box {
+        width: 500px;
+        background-color: $colorLight;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+        -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+
+        .registration-form-box {
+            padding: 20px;
+            border: 2px solid $colorBright;
+            border-top: none;
+
+            .registration-form {
+                width: 100%;
+
+                .registration-form-field {
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    .registration-form-field-label {
+                        color: $colorDark;
+                    }
+
+                    .registration-form-field-error {
+                        font-size: 14px;
+                        padding: 2px;
+                        font-weight: 600;
+                    }
+                }
+
+                ::ng-deep {
+                    .mat-form-field-wrapper {
+                        font-family: 'Jura', sans-serif;
+                    }
+
+                    .mat-form-field-flex {
+                        font-size: 18px;
+                        font-weight: 900;
+                        letter-spacing: 1px;
+                    }
+
+                    .mat-form-field-appearance-outline .mat-form-field-outline {
+                        color: $colorDark;
+                    }
+
+                    .mat-form-field-label {
+                        color: $colorDark;
+                    }
+                }
+
+                .registration-form-submit-btn {
+                    margin: 15px 0 10px;
+                    font-family: 'Jura', sans-serif;
+                    font-size: 16px;
+                    font-weight: 900;
+                    background-color: $colorDark;
+                    color: $colorLight;
+                    width: 100%;
+
+                    &:disabled {
+                        opacity: .3;
+                    }
+                }
+            }
+
+            .or-divider {
+                text-align: center;
+                font-size: 16px;
+                font-weight: 900;
+            }
+
+            .login-link {
+                display: block;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 900;
+                margin-top: 10px;
+            }
+        }
+    }
+}
