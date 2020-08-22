@@ -32,6 +32,10 @@ const routes: Routes = [
                 path: 'login',
                 loadChildren: 'src/app/modules/authentication/authentication.module#AuthenticationModule'
             },
+            {
+                path: 'dashboard',
+                loadChildren: 'src/app/modules/dashboard/dashboard.module#DashboardModule'
+            },
             { path: 'error', component: PageNotFoundComponent },
             { path: '**', redirectTo: 'error' }
         ]
