@@ -50,7 +50,11 @@
         </a>
     </div>
     <div class="header-language-selector">
-        <div class="header-language-item" (click)="setLanguage('ukr'); pageReload()">UKR</div>
-        <div class="header-language-item" (click)="setLanguage('eng'); pageReload()">ENG</div>
+        <div class="header-language-item" [ngClass]="{'header-language-item-active': userLanguage === 'ukr'}"
+             (click)="setLanguage('ukr'); pageReload()">UKR
+        </div>
+        <div class="header-language-item" [ngClass]="{'header-language-item-active': userLanguage === 'eng'}"
+             (click)="setLanguage('eng'); pageReload()">ENG
+        </div>
     </div>
 </mat-toolbar>

@@ -9,6 +9,7 @@ import { TranslateService } from '../../../services/translate/translate.service'
 export class NavHeaderComponent implements OnInit {
 
     @Output() public sideNavToggle = new EventEmitter();
+    public userLanguage: string;
 
     constructor(private translateService: TranslateService) { }
 
@@ -16,6 +17,7 @@ export class NavHeaderComponent implements OnInit {
         localStorage.getItem('translationLanguage')
             ? this.setLanguage(localStorage.getItem('translationLanguage'))
             : this.setLanguage('ukr');
+        this.userLanguage = localStorage.getItem('translationLanguage');
     }
 
     public onToggleSideNav = () => {
