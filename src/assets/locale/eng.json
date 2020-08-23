@@ -36,5 +36,8 @@
   "GENDER_ERROR": "Minimum gender length is 8 symbols",
   "DATE_OF_BIRTH": "Date of birth",
   "DATE_OF_BIRTH_REQUIRED": "Date of birth is required",
-  "DATE_OF_BIRTH_ERROR": "Minimum Date of birth length is 8 symbols"
+  "DATE_OF_BIRTH_ERROR": "Minimum Date of birth length is 8 symbols",
+  "MALE": "Male",
+  "FEMALE": "Female",
+  "CLEAR": "Clear"
 }

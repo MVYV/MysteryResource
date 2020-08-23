@@ -42,26 +42,6 @@ $colorBrightLight: #c28f2c;
                     }
                 }
 
-                ::ng-deep {
-                    .mat-form-field-wrapper {
-                        font-family: 'Jura', sans-serif;
-                    }
-
-                    .mat-form-field-flex {
-                        font-size: 18px;
-                        font-weight: 900;
-                        letter-spacing: 1px;
-                    }
-
-                    .mat-form-field-appearance-outline .mat-form-field-outline {
-                        color: $colorDark;
-                    }
-
-                    .mat-form-field-label {
-                        color: $colorDark;
-                    }
-                }
-
                 .registration-form-submit-btn {
                     margin: 15px 0 10px;
                     font-family: 'Jura', sans-serif;
