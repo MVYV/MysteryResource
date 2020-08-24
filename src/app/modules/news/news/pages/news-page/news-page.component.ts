@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '../../../../services/translate/translate.service';
+import { TranslateService } from '../../../../../services/translate/translate.service';
 
 @Component({
     selector: 'app-news-page',

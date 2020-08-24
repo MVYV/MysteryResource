@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TechnologiesComponent } from './technologies/technologies.component';
-import { TechnologiesPageComponent } from './technologies/technologies-page/technologies-page.component';
+import { TechnologiesPageComponent } from './technologies/pages/technologies-page/technologies-page.component';
 
 const technologiesRoutes: Routes = [
     {

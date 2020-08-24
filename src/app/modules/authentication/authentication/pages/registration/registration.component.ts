@@ -12,7 +12,7 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
     templateUrl: './registration.component.html',
     styleUrls: ['./registration.component.scss'],
     providers: [
-        { provide: MAT_DATE_LOCALE, useValue: 'ja-JP' },
+        { provide: MAT_DATE_LOCALE, useValue: 'uk-UK' },
         {
             provide: DateAdapter,
             useClass: MomentDateAdapter,
@@ -24,14 +24,6 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 export class RegistrationComponent implements OnInit {
 
     public registrationForm = this.formBuilder.group({
-        firstNameControl: ['', [
-            Validators.required,
-            Validators.minLength
-        ]],
-        lastNameControl: ['', [
-            Validators.required,
-            Validators.minLength
-        ]],
         userNameControl: ['', [
             Validators.required,
             Validators.minLength
@@ -40,26 +32,12 @@ export class RegistrationComponent implements OnInit {
             Validators.required,
             Validators.email
         ]],
-        cityControl: ['', [
-            Validators.required,
-            Validators.minLength
-        ]],
-        countryControl: ['', [
-            Validators.required,
-            Validators.minLength
-        ]],
         dateOfBirthControl: ['', [
-            Validators.required
-        ]],
-        genderControl: ['', [
             Validators.required
         ]],
         passwordControl: ['', [
             Validators.required,
             Validators.minLength
-        ]],
-        rolesControl: ['', [
-            Validators.required
         ]]
     });
 

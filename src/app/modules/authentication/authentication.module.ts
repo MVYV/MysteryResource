@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './authentication/login/login.component';
-import { LogoutComponent } from './authentication/logout/logout.component';
-import { RegistrationComponent } from './authentication/registration/registration.component';
+import { LoginComponent } from './authentication/pages/login/login.component';
+import { LogoutComponent } from './authentication/pages/logout/logout.component';
+import { RegistrationComponent } from './authentication/pages/registration/registration.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';

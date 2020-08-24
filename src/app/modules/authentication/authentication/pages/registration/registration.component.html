@@ -1,0 +1,81 @@
+<div class="registration-container">
+    <div class="registration-box">
+        <app-shared-box-header boxTitle="REGISTRATION"></app-shared-box-header>
+        <div class="registration-form-box">
+            <form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="submitRegistration()">
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'USER_NAME' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="userNameControl"
+                           placeholder="{{ 'USER_NAME' | translate }}" required minlength="5"
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('userNameControl').hasError('minlength') && !registrationForm.get('userNameControl').hasError('required')">
+                        <span>{{ 'USER_NAME_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('userNameControl').hasError('required')">
+                        <span>{{ 'USER_NAME_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'EMAIL' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput formControlName="emailControl"
+                           placeholder="yourmail@mail.com" required
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('emailControl').hasError('email') && !registrationForm.get('emailControl').hasError('required')">
+                        <span>{{ 'EMAIL_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('emailControl').hasError('required')">
+                        <span>{{ 'EMAIL_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+<!--                <mat-form-field class="registration-form-field">-->
+<!--                    <mat-label class="registration-form-field-label">{{ 'GENDER' | translate }} *</mat-label>-->
+<!--                    <mat-select class="registration-form-field-input" formControlName="genderControl">-->
+<!--                        <mat-option>{{ 'CLEAR' | translate }}</mat-option>-->
+<!--                        <mat-option value="male">{{ 'MALE' | translate }}</mat-option>-->
+<!--                        <mat-option value="female">{{ 'FEMALE' | translate }}</mat-option>-->
+<!--                    </mat-select>-->
+<!--                    <mat-error class="registration-form-field-error"-->
+<!--                               *ngIf="registrationForm.get('genderControl').hasError('required')">-->
+<!--                        <span>{{ 'GENDER_REQUIRED' | translate }}</span>-->
+<!--                    </mat-error>-->
+<!--                </mat-form-field>-->
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'DATE_OF_BIRTH' | translate }}</mat-label>
+                    <input matInput [matDatepicker]="dp" formControlName="dateOfBirthControl" readonly required>
+                    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                    <mat-datepicker #dp></mat-datepicker>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('passwordControl').hasError('minlength') && !registrationForm.get('passwordControl').hasError('required')">
+                        <span>{{ 'PASSWORD_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('passwordControl').hasError('required')">
+                        <span>{{ 'PASSWORD_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="registration-form-field">
+                    <mat-label class="registration-form-field-label">{{ 'PASSWORD' | translate }}</mat-label>
+                    <input class="registration-form-field-input" matInput type="password"
+                           formControlName="passwordControl"
+                           placeholder="{{ 'PASSWORD' | translate }}" required minlength="10"
+                           autocomplete="off">
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('passwordControl').hasError('minlength') && !registrationForm.get('passwordControl').hasError('required')">
+                        <span>{{ 'PASSWORD_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="registration-form-field-error"
+                               *ngIf="registrationForm.get('passwordControl').hasError('required')">
+                        <span>{{ 'PASSWORD_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <button class="registration-form-submit-btn" type="submit" mat-raised-button
+                        [disabled]="!registrationForm.valid">{{ 'REGISTER' | translate }}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
