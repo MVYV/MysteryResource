@@ -10,6 +10,54 @@ $colorBrightLight: #c28f2c;
     align-items: center;
     justify-content: center;
     font-family: 'Jura', sans-serif;
+    position: relative;
+
+    .registration-link {
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        background-color: $colorDark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        text-align: center;
+        text-decoration: none;
+        color: $colorLight;
+        font-size: 16px;
+        font-weight: 900;
+        -webkit-transition: all ease-in-out .3s;
+        -moz-transition: all ease-in-out .3s;
+        -ms-transition: all ease-in-out .3s;
+        -o-transition: all ease-in-out .3s;
+        transition: all ease-in-out .3s;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            right: -15px;
+            border-bottom: 15px solid transparent;
+            border-top: 15px solid transparent;
+            border-left: 15px solid $colorDark;
+            -webkit-transition: all ease-in-out .3s;
+            -moz-transition: all ease-in-out .3s;
+            -ms-transition: all ease-in-out .3s;
+            -o-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
+        }
+
+        &:hover {
+            background-color: $colorBright;
+
+            &::after {
+                border-left-color: $colorBright;
+            }
+        }
+    }
 
     .login-box {
         width: 500px;
@@ -55,20 +103,6 @@ $colorBrightLight: #c28f2c;
                         opacity: .3;
                     }
                 }
-            }
-
-            .or-divider {
-                text-align: center;
-                font-size: 16px;
-                font-weight: 900;
-            }
-
-            .registration-link {
-                display: block;
-                text-align: center;
-                font-size: 16px;
-                font-weight: 900;
-                margin-top: 10px;
             }
         }
     }

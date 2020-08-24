@@ -1,4 +1,5 @@
 <div class="login-page-box">
+    <a class="registration-link" routerLink="registration">{{ 'REGISTRATION' | translate }}</a>
     <div class="login-box">
         <app-shared-box-header boxTitle="LOG_IN_"></app-shared-box-header>
         <div class="login-form-box">
@@ -35,8 +36,6 @@
                         [disabled]="!logInForm.valid">{{ 'LOG_IN' | translate }}
                 </button>
             </form>
-            <div class="or-divider">{{ 'OR' | translate }}</div>
-            <a class="registration-link" routerLink="registration">{{ 'REGISTER' | translate }}</a>
         </div>
     </div>
 </div>
