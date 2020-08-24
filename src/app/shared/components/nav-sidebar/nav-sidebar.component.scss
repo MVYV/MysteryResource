@@ -10,8 +10,8 @@ $colorBrightLight: #c28f2c;
 
     .sidenav-menu-icon {
         position: absolute;
-        left: 10px;
-        top: 22px;
+        left: 15px;
+        top: 21px;
     }
 
     .sidenav-title-link {
@@ -26,7 +26,8 @@ $colorBrightLight: #c28f2c;
             font-family: 'Jura', sans-serif;
             font-size: 32px;
             font-weight: 900;
-            margin-left: 10px;
+            margin-left: 25px;
+            padding-bottom: 2px;
 
             span {
                 color: $colorBright;
