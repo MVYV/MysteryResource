@@ -24,18 +24,18 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 export class RegistrationComponent implements OnInit {
 
     public registrationForm = this.formBuilder.group({
-        userNameControl: ['', [
+        userName: ['', [
             Validators.required,
             Validators.minLength
         ]],
-        emailControl: ['', [
+        email: ['', [
             Validators.required,
             Validators.email
         ]],
-        dateOfBirthControl: ['', [
+        dateOfBirth: ['', [
             Validators.required
         ]],
-        passwordControl: ['', [
+        password: ['', [
             Validators.required,
             Validators.minLength
         ]]

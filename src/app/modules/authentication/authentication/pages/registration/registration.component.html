@@ -5,29 +5,29 @@
             <form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="submitRegistration()">
                 <mat-form-field class="registration-form-field">
                     <mat-label class="registration-form-field-label">{{ 'USER_NAME' | translate }}</mat-label>
-                    <input class="registration-form-field-input" matInput formControlName="userNameControl"
+                    <input class="registration-form-field-input" matInput formControlName="userName"
                            placeholder="{{ 'USER_NAME' | translate }}" required minlength="5"
                            autocomplete="off">
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('userNameControl').hasError('minlength') && !registrationForm.get('userNameControl').hasError('required')">
+                               *ngIf="registrationForm.get('userName').hasError('minlength') && !registrationForm.get('userName').hasError('required')">
                         <span>{{ 'USER_NAME_ERROR' | translate }}</span>
                     </mat-error>
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('userNameControl').hasError('required')">
+                               *ngIf="registrationForm.get('userName').hasError('required')">
                         <span>{{ 'USER_NAME_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field class="registration-form-field">
                     <mat-label class="registration-form-field-label">{{ 'EMAIL' | translate }}</mat-label>
-                    <input class="registration-form-field-input" matInput formControlName="emailControl"
+                    <input class="registration-form-field-input" matInput formControlName="email"
                            placeholder="yourmail@mail.com" required
                            autocomplete="off">
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('emailControl').hasError('email') && !registrationForm.get('emailControl').hasError('required')">
+                               *ngIf="registrationForm.get('email').hasError('email') && !registrationForm.get('email').hasError('required')">
                         <span>{{ 'EMAIL_ERROR' | translate }}</span>
                     </mat-error>
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('emailControl').hasError('required')">
+                               *ngIf="registrationForm.get('email').hasError('required')">
                         <span>{{ 'EMAIL_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
@@ -45,30 +45,30 @@
 <!--                </mat-form-field>-->
                 <mat-form-field class="registration-form-field">
                     <mat-label class="registration-form-field-label">{{ 'DATE_OF_BIRTH' | translate }}</mat-label>
-                    <input matInput [matDatepicker]="dp" formControlName="dateOfBirthControl" readonly required>
+                    <input matInput [matDatepicker]="dp" formControlName="dateOfBirth" readonly required>
                     <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
                     <mat-datepicker #dp></mat-datepicker>
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('passwordControl').hasError('minlength') && !registrationForm.get('passwordControl').hasError('required')">
+                               *ngIf="registrationForm.get('password').hasError('minlength') && !registrationForm.get('password').hasError('required')">
                         <span>{{ 'PASSWORD_ERROR' | translate }}</span>
                     </mat-error>
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('passwordControl').hasError('required')">
+                               *ngIf="registrationForm.get('password').hasError('required')">
                         <span>{{ 'PASSWORD_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field class="registration-form-field">
                     <mat-label class="registration-form-field-label">{{ 'PASSWORD' | translate }}</mat-label>
                     <input class="registration-form-field-input" matInput type="password"
-                           formControlName="passwordControl"
+                           formControlName="password"
                            placeholder="{{ 'PASSWORD' | translate }}" required minlength="10"
                            autocomplete="off">
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('passwordControl').hasError('minlength') && !registrationForm.get('passwordControl').hasError('required')">
+                               *ngIf="registrationForm.get('password').hasError('minlength') && !registrationForm.get('password').hasError('required')">
                         <span>{{ 'PASSWORD_ERROR' | translate }}</span>
                     </mat-error>
                     <mat-error class="registration-form-field-error"
-                               *ngIf="registrationForm.get('passwordControl').hasError('required')">
+                               *ngIf="registrationForm.get('password').hasError('required')">
                         <span>{{ 'PASSWORD_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>

@@ -5,29 +5,29 @@
             <form class="login-form" [formGroup]="logInForm" (ngSubmit)="submitLogIn()">
                 <mat-form-field class="login-form-field">
                     <mat-label class="login-form-field-label">{{ 'EMAIL' | translate }}</mat-label>
-                    <input class="login-form-field-input" matInput formControlName="emailControl"
+                    <input class="login-form-field-input" matInput formControlName="email"
                            placeholder="yourmail@mail.com" required
                            autocomplete="off">
                     <mat-error class="login-form-field-error"
-                               *ngIf="logInForm.get('emailControl').hasError('email') && !logInForm.get('emailControl').hasError('required')">
+                               *ngIf="logInForm.get('email').hasError('email') && !logInForm.get('email').hasError('required')">
                         <span>{{ 'EMAIL_ERROR' | translate }}</span>
                     </mat-error>
                     <mat-error class="login-form-field-error"
-                               *ngIf="logInForm.get('emailControl').hasError('required')">
+                               *ngIf="logInForm.get('email').hasError('required')">
                         <span>{{ 'EMAIL_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field class="login-form-field">
                     <mat-label class="login-form-field-label">{{ 'PASSWORD' | translate }}</mat-label>
-                    <input class="login-form-field-input" matInput type="password" formControlName="passwordControl"
+                    <input class="login-form-field-input" matInput type="password" formControlName="password"
                            placeholder="{{ 'PASSWORD' | translate }}"
                            minlength="8" required autocomplete="off">
                     <mat-error class="login-form-field-error"
-                               *ngIf="logInForm.get('passwordControl').hasError('minlength') && !logInForm.get('passwordControl').hasError('required')">
+                               *ngIf="logInForm.get('password').hasError('minlength') && !logInForm.get('password').hasError('required')">
                         <span>{{ 'PASSWORD_ERROR' | translate }}</span>
                     </mat-error>
                     <mat-error class="login-form-field-error"
-                               *ngIf="logInForm.get('passwordControl').hasError('required')">
+                               *ngIf="logInForm.get('password').hasError('required')">
                         <span>{{ 'PASSWORD_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
