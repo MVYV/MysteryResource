@@ -50,3 +50,43 @@ html, body {
     font-family: 'Jura', sans-serif;
     font-weight: 900;
 }
+.mat-calendar {
+    background-color: $colorLight;
+    font-family: 'Jura', sans-serif;
+}
+.mat-calendar-body-cell-content,
+.mat-calendar-body-label {
+    color: #000000;
+    font-weight: 900;
+}
+.mat-calendar-table-header {
+    th {
+        font-size: 16px;
+        color: #000000;
+        font-weight: 900;
+    }
+}
+.mat-calendar-period-button {
+    font-family: 'Jura', sans-serif;
+}
+.mat-calendar-body-selected {
+    background-color: $colorBright;
+    color: $colorLight;
+}
+.mat-calendar-body-today:not(.mat-calendar-body-selected) {
+    border-color: $colorBright;
+}
+.mat-datepicker-toggle-active {
+    color: $colorBright;
+}
+.mat-datepicker-toggle {
+    color: $colorDark;
+}
+.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+    width: 50px;
+    font-size: 22px;
+}
+.mat-form-field-suffix .mat-icon-button:focus {
+    background-color: $colorLight;
+    outline: none;
+}

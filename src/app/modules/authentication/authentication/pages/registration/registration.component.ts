@@ -44,6 +44,11 @@ export class RegistrationComponent implements OnInit {
     constructor(private formBuilder: FormBuilder, private adapterForDate: DateAdapter<any>) { }
 
     ngOnInit(): void {
+        if (localStorage.getItem('translationLanguage') === 'eng') {
+            this.adapterForDate.setLocale('en');
+        } else {
+            this.adapterForDate.setLocale('uk');
+        }
     }
 
     public submitRegistration() {

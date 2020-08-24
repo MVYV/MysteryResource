@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppSharedModule } from '../../shared/modules/app-shared/app-shared.module';
 
@@ -23,6 +24,7 @@ import { AppSharedModule } from '../../shared/modules/app-shared/app-shared.modu
         MatButtonModule,
         MatSelectModule,
         MatDatepickerModule,
+        MatIconModule,
         ReactiveFormsModule,
         FormsModule,
         AppSharedModule
