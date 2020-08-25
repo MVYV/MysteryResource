@@ -50,10 +50,12 @@
         </a>
         <mat-menu #menu="matMenu" class="header-dropdown-menu">
             <button mat-menu-item routerLink="login" [routerLinkActive]="'active-dropdown-link'"
+                    [routerLinkActiveOptions]="{ exact: true }"
                     class="header-dropdown-item">
                 <mat-icon class="header-dropdown-login">login</mat-icon>
                 {{ 'LOG_IN' | translate }}</button>
             <button mat-menu-item routerLink="login/registration" [routerLinkActive]="'active-dropdown-link'"
+                    [routerLinkActiveOptions]="{ exact: true }"
                     class="header-dropdown-item">
                 <mat-icon class="header-dropdown-registration">person_add</mat-icon>
                 {{ 'REGISTRATION' | translate }}</button>

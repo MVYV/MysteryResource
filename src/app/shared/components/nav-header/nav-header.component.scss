@@ -60,10 +60,6 @@ $colorBrightLight: #c28f2c;
             background-color: $colorBright;
         }
 
-        .active-header-link {
-            color: $colorBright;
-        }
-
         .header-nav-item {
             height: 80px;
             border-radius: 0;
@@ -141,4 +137,11 @@ $colorBrightLight: #c28f2c;
 .header-dropdown-login,
 .header-dropdown-registration {
     color: $colorLight;
+}
+.active-dropdown-link {
+    background-color: $colorBright;
+
+    &:hover {
+        background-color: $colorBright;
+    }
 }

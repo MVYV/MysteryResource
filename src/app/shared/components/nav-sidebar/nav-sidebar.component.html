@@ -23,24 +23,14 @@
        (click)="onSideNavClose();" tabindex="-1">{{ 'TECHNOLOGIES' | translate}}</a>
     <a mat-list-item class="global-mat-list-item" routerLink="dashboard" [routerLinkActive]="'active-sidebar-link'"
        (click)="onSideNavClose();" tabindex="-1">{{ 'DASHBOARD' | translate}}</a>
-    <a mat-list-item class="global-mat-list-item" routerLink="login" [routerLinkActive]="'active-sidebar-link'"
-       (click)="onSideNavClose();" tabindex="-1">{{ 'LOG_IN' | translate}}</a>
-    <mat-accordion>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    {{ 'LOG_IN' | translate}}
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <button mat-menu-item routerLink="login" [routerLinkActive]="'active-dropdown-link'"
-                    class="sidebar-dropdown-item">
-                <mat-icon class="sidebar-dropdown-login">login</mat-icon>
-                {{ 'LOG_IN' | translate }}</button>
-            <button mat-menu-item routerLink="login/registration" [routerLinkActive]="'active-dropdown-link'"
-                    class="sidebar-dropdown-item">
-                <mat-icon class="sidebar-dropdown-registration">person_add</mat-icon>
-                {{ 'REGISTRATION' | translate }}</button>
-        </mat-expansion-panel>
-    </mat-accordion>
 </mat-nav-list>
+<div class="sidebar-auth">
+    <a class="sidebar-login" routerLink="login" [routerLinkActive]="'active-sidebar-icon-link'"
+       [routerLinkActiveOptions]="{ exact: true }" (click)="onSideNavClose();">
+        <mat-icon>login</mat-icon>
+    </a>
+    <a class="sidebar-registration" routerLink="login/registration" [routerLinkActive]="'active-sidebar-icon-link'"
+       [routerLinkActiveOptions]="{ exact: true }" (click)="onSideNavClose();">
+        <mat-icon>person_add</mat-icon>
+    </a>
+</div>

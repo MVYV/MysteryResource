@@ -27,7 +27,6 @@ html, body {
     box-shadow: none !important;
 }
 
-
 .mat-form-field-wrapper {
     font-family: 'Jura', sans-serif;
 }
@@ -101,34 +100,6 @@ html, body {
 
     .header-dropdown-item {
         color: $colorLight;
-        font-family: 'Jura', sans-serif;
-        border: none;
-        outline: none;
-        font-size: 16px;
-        font-weight: 900;
-        letter-spacing: 1px;
-
-        &:hover {
-            background-color: $colorBright;
-        }
-    }
-}
-.mat-expansion-panel {
-    background-color: $colorLight;
-    border-radius: 0;
-}
-.mat-expansion-panel-header-title {
-    color: $colorBrightLight;
-    font-family: 'Jura', sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-.mat-expansion-panel-body {
-    padding: 0 !important;
-
-    .sidebar-dropdown-item {
-        color: $colorBrightLight;
         font-family: 'Jura', sans-serif;
         border: none;
         outline: none;

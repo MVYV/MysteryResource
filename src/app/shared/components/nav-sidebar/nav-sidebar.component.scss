@@ -55,7 +55,35 @@ $colorBrightLight: #c28f2c;
         color: $colorDark;
     }
 }
-.sidebar-dropdown-login,
-.sidebar-dropdown-registration {
-    color: $colorBrightLight;
+.sidebar-auth {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid $colorBrightLight;
+    border-bottom: 1px solid $colorBrightLight;
+
+    .sidebar-login {
+        padding: 10px 15px 15px 8px;
+    }
+
+    .sidebar-registration {
+        padding: 10px 15px 15px 9px;
+    }
+
+    .sidebar-login,
+    .sidebar-registration {
+        color: $colorBrightLight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        mat-icon {
+            font-size: 30px;
+        }
+    }
+
+    .active-sidebar-icon-link {
+        background-color: $colorBrightLight;
+        color: $colorDark;
+    }
 }
