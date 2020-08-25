@@ -14,7 +14,6 @@ $colorBrightLight: #c28f2c;
     .registration-box {
         width: 500px;
         background-color: transparent;
-        border-radius: 5px;
         -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
         -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
@@ -57,6 +56,10 @@ $colorBrightLight: #c28f2c;
                         opacity: .3;
                     }
                 }
+            }
+
+            @media screen and (max-width: 500px) {
+                border: none;
             }
         }
 
@@ -115,6 +118,10 @@ $colorBrightLight: #c28f2c;
                 -ms-transition: all ease-in-out .3s;
                 -o-transition: all ease-in-out .3s;
                 transition: all ease-in-out .3s;
+
+                @media screen and (max-width: 530px) {
+                    border: none;
+                }
             }
 
             &:hover {
