@@ -1,0 +1,12 @@
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
+.global-footer-wrapper {
+    background-color: $colorDark;
+    width: 100%;
+    height: 500px;
+    font-family: 'Courgette', cursive;
+    color: $colorBright;
+}
