@@ -10,63 +10,15 @@ $colorBrightLight: #c28f2c;
     align-items: center;
     justify-content: center;
     font-family: 'Jura', sans-serif;
-    position: relative;
-
-    .login-link {
-        height: 30px;
-        position: absolute;
-        top: 20px;
-        left: 35px;
-        background-color: $colorDark;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 25px 2px;
-        text-align: center;
-        letter-spacing: 1px;
-        text-decoration: none;
-        color: $colorLight;
-        font-size: 16px;
-        font-weight: 900;
-        -webkit-transition: all ease-in-out .3s;
-        -moz-transition: all ease-in-out .3s;
-        -ms-transition: all ease-in-out .3s;
-        -o-transition: all ease-in-out .3s;
-        transition: all ease-in-out .3s;
-
-        &::before {
-            content: '';
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: 0;
-            left: -15px;
-            border-bottom: 15px solid transparent;
-            border-top: 15px solid transparent;
-            border-right: 15px solid $colorDark;
-            -webkit-transition: all ease-in-out .3s;
-            -moz-transition: all ease-in-out .3s;
-            -ms-transition: all ease-in-out .3s;
-            -o-transition: all ease-in-out .3s;
-            transition: all ease-in-out .3s;
-        }
-
-        &:hover {
-            background-color: $colorBright;
-
-            &::before {
-                border-right-color: $colorBright;
-            }
-        }
-    }
 
     .registration-box {
         width: 500px;
-        background-color: $colorLight;
+        background-color: transparent;
         border-radius: 5px;
         -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
         -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+        position: relative;
 
         .registration-form-box {
             padding: 20px;
@@ -104,6 +56,72 @@ $colorBrightLight: #c28f2c;
                     &:disabled {
                         opacity: .3;
                     }
+                }
+            }
+        }
+
+        .or-box {
+            width: 50%;
+            height: 30px;
+            position: absolute;
+            top: 479px;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25px 2px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 16px;
+            font-weight: 900;
+            color: $colorDark;
+        }
+
+        .login-link {
+            width: 50%;
+            height: 30px;
+            position: absolute;
+            top: 479px;
+            left: 0;
+            background-color: $colorBright;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25px 2px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: $colorLight;
+            font-size: 16px;
+            font-weight: 900;
+            -webkit-transition: all ease-in-out .3s;
+            -moz-transition: all ease-in-out .3s;
+            -ms-transition: all ease-in-out .3s;
+            -o-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
+
+            &::before {
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: -15px;
+                border-bottom: 15px solid transparent;
+                border-top: 15px solid transparent;
+                border-right: 15px solid $colorBright;
+                -webkit-transition: all ease-in-out .3s;
+                -moz-transition: all ease-in-out .3s;
+                -ms-transition: all ease-in-out .3s;
+                -o-transition: all ease-in-out .3s;
+                transition: all ease-in-out .3s;
+            }
+
+            &:hover {
+                background-color: $colorDark;
+
+                &::before {
+                    border-right-color: $colorDark;
                 }
             }
         }
