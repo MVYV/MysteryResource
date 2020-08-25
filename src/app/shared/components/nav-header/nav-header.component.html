@@ -41,13 +41,23 @@
                 </g>
             </svg>
         </a>
-        <a class="header-nav-item-icon" mat-button routerLink="login" [routerLinkActive]="'active-header-link'">
+        <a class="header-nav-item-icon" mat-button [matMenuTriggerFor]="menu" [routerLinkActive]="'active-header-link'">
             <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24">
                 <g fill='#f9f9ea'>
                     <path d="M21 10H10.6C9.8 8.2 8 7 6 7c-5 0-5 4-5 5s0 5 5 5c2.2 0 4-1.4 4.7-3.3 0 0 .3-.7 1.3-.7s1 1 1 1 0 1 1 1 1.1-1 1.1-1-.1-1 .9-1 1 1 1 1 0 1 1 1 1-1 1-1 0-1 1-1 1 1 1 1 0 1 1 1 1-1 1-1v-2c0-1.1-.9-2-2-2zM4.1 14c-1 0-1.1-.9-1.1-2s.1-2 1.1-2 1.9.9 1.9 2-.8 2-1.9 2z"></path>
                 </g>
             </svg>
         </a>
+        <mat-menu #menu="matMenu" class="header-dropdown-menu">
+            <button mat-menu-item routerLink="login" [routerLinkActive]="'active-dropdown-link'"
+                    class="header-dropdown-item">
+                <mat-icon class="header-dropdown-login">login</mat-icon>
+                {{ 'LOG_IN' | translate }}</button>
+            <button mat-menu-item routerLink="login/registration" [routerLinkActive]="'active-dropdown-link'"
+                    class="header-dropdown-item">
+                <mat-icon class="header-dropdown-registration">person_add</mat-icon>
+                {{ 'REGISTRATION' | translate }}</button>
+        </mat-menu>
     </div>
     <div class="header-language-selector">
         <div class="header-language-item" [ngClass]="{'header-language-item-active': userLanguage === 'ukr'}"

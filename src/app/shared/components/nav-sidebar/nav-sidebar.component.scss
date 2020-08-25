@@ -47,10 +47,15 @@ $colorBrightLight: #c28f2c;
         font-family: 'Jura', sans-serif;
         font-weight: 900;
         font-size: 18px;
+        letter-spacing: 1px;
     }
 
     .active-sidebar-link {
         background-color: $colorBrightLight;
         color: $colorDark;
     }
+}
+.sidebar-dropdown-login,
+.sidebar-dropdown-registration {
+    color: $colorBrightLight;
 }

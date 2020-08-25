@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class NavSidebarComponent implements OnInit {
 
     @Output() public sideNavClose = new EventEmitter();
+    public panelOpenState = false;
 
     constructor() { }
 
@@ -16,6 +17,6 @@ export class NavSidebarComponent implements OnInit {
 
     public onSideNavClose = () => {
         this.sideNavClose.emit();
-    };
+    }
 
 }

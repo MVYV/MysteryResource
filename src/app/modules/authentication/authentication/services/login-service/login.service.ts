@@ -11,8 +11,8 @@ export class LoginService {
 
     constructor(private http: HttpClient) { }
 
-    public loginWithCredentials(user: UserModel): Observable<any> {
-        return this.http.post<any>('https://cyberwe.herokuapp.com/authenticate', user).pipe(
+    public loginWithCredentials(user: UserModel) {
+        return this.http.post('https://cyberwe.herokuapp.com/authenticate', user).pipe(
             map(
                 userData => {
                     return userData;

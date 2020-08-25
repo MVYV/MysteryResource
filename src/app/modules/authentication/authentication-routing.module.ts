@@ -4,6 +4,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { LoginComponent } from './authentication/pages/login/login.component';
 import { LogoutComponent } from './authentication/pages/logout/logout.component';
 import { RegistrationComponent } from './authentication/pages/registration/registration.component';
+import { UserProfileComponent } from './authentication/pages/user-profile/user-profile.component';
 
 const authenticationRoutes: Routes = [
     {
@@ -12,6 +13,7 @@ const authenticationRoutes: Routes = [
         children: [
             { path: '', component: LoginComponent },
             { path: 'registration', component: RegistrationComponent },
+            { path: 'profile', component: UserProfileComponent },
         ]
     }
 ];

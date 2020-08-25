@@ -13,9 +13,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppSharedModule } from '../../shared/modules/app-shared/app-shared.module';
+import { UserProfileComponent } from './authentication/pages/user-profile/user-profile.component';
 
 @NgModule({
-    declarations: [LoginComponent, LogoutComponent, RegistrationComponent, AuthenticationComponent],
+    declarations: [LoginComponent, LogoutComponent, RegistrationComponent, AuthenticationComponent, UserProfileComponent],
     imports: [
         CommonModule,
         AuthenticationRoutingModule,
