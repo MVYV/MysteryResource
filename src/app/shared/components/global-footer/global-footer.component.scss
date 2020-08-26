@@ -2,11 +2,106 @@ $colorBright: #f21937;
 $colorLight: #f9f9ea;
 $colorDark: #111111;
 $colorBrightLight: #c28f2c;
+$brighterColor: #ff4800;
+$newMiddleColor: #7AB1FF;
 
 .global-footer-wrapper {
+    padding: 20px;
     background-color: $colorDark;
     width: 100%;
-    height: 500px;
-    font-family: 'Courgette', cursive;
-    color: $colorBright;
+
+    .g-f-header {
+        width: 100%;
+        padding: 0 0 20px 0;
+        font-weight: 900;
+        font-size: 22px;
+        font-family: 'Jura', sans-serif;
+        color: $colorLight;
+        text-align: right;
+        letter-spacing: 1px;
+        border-bottom: 1px solid $colorBright;
+    }
+
+    .g-f-associates {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 5px;
+
+        .g-f-a-hedgehog {
+            padding: 5px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-decoration: none;
+            height: 200px;
+            //background-color: $colorBright;
+
+            &:hover {
+                .g-f-a-h-name {
+                    color: $newMiddleColor;
+
+                    .colored-letter {
+                        color: $brighterColor;
+                    }
+                }
+            }
+
+            .g-f-a-h-img {
+                //width: 100px;
+                height: 100px;
+                overflow: hidden;
+                text-align: center;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .g-f-a-h-name {
+                margin-top: 5px;
+                font-family: 'Courgette', cursive;
+                text-align: center;
+                font-size: 36px;
+                color: $colorLight;
+                line-height: 40px;
+                letter-spacing: 3px;
+                font-weight: 900;
+
+                .colored-letter {
+                    color: $colorBright;
+                }
+            }
+        }
+    }
+
+    .g-f-social {
+        padding: 10px 20px 20px 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .g-f-social-btn {
+            padding: 5px 0;
+            border: none;
+            outline: none;
+
+            &:hover {
+                fa-icon {
+                    color: $colorBright;
+                }
+
+            }
+
+            fa-icon {
+                font-size: 36px;
+                color: $colorLight;
+                cursor: pointer;
+            }
+        }
+
+
+    }
 }

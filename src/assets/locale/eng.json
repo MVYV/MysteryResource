@@ -40,5 +40,7 @@
   "DATE_OF_BIRTH_ERROR": "Minimum Date of birth length is 8 symbols",
   "MALE": "Male",
   "FEMALE": "Female",
-  "CLEAR": "Clear"
+  "CLEAR": "Clear",
+  "OUR_ASSOCIATES": "Our associates",
+  "FOLLOW_US": "Follow us"
 }

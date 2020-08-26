@@ -34,6 +34,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ClarityModule } from '@clr/angular';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { ClarityModule } from '@clr/angular';
         MatListModule,
         MatMenuModule,
         MatExpansionModule,
-        ClarityModule
+        ClarityModule,
+        FontAwesomeModule
     ],
     providers: [],
     exports: [],
