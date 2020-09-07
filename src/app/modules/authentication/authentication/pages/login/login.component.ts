@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { LoginService } from '../../services/login-service/login.service';
+import { AuthenticationService } from '../../../../../services/authentication/authentication.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         ]]
     });
 
-    constructor(private formBuilder: FormBuilder, private loginService: LoginService) { }
+    constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) { }
 
     ngOnInit(): void {
     }
@@ -34,8 +34,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     }
 
     public submitLogIn(): void {
-        this.loginSubscription = this.loginService.loginWithCredentials(this.logInForm.value).subscribe(
-            (data) => {console.log(data)},
+        this.loginSubscription = this.authenticationService.logIn(this.logInForm.value).subscribe(
+            (responseData: any) => {
+                console.log(responseData.headers);
+                this.authenticationService.getDecodedToken();
+            },
             error => {}
         );
     }
