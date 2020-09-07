@@ -27,7 +27,7 @@ $newMiddleColor: #7AB1FF;
         justify-content: space-evenly;
         padding-top: 5px;
 
-        .g-f-a-hedgehog {
+        .g-f-a {
             padding: 5px;
             display: flex;
             flex-flow: column wrap;
@@ -36,20 +36,17 @@ $newMiddleColor: #7AB1FF;
             align-content: center;
             text-decoration: none;
             height: 200px;
-            //background-color: $colorBright;
+            -webkit-transition: all ease-in-out .3s;
+            -moz-transition: all ease-in-out .3s;
+            -ms-transition: all ease-in-out .3s;
+            -o-transition: all ease-in-out .3s;
+            transition: all ease-in-out .3s;
 
             &:hover {
-                .g-f-a-h-name {
-                    color: $newMiddleColor;
-
-                    .colored-letter {
-                        color: $brighterColor;
-                    }
-                }
+                filter: grayscale(100%);
             }
 
-            .g-f-a-h-img {
-                //width: 100px;
+            .g-f-a-img {
                 height: 100px;
                 overflow: hidden;
                 text-align: center;
@@ -59,7 +56,17 @@ $newMiddleColor: #7AB1FF;
                 }
             }
 
-            .g-f-a-h-name {
+            .g-f-a-m-img {
+                height: 100%;
+                overflow: hidden;
+                text-align: center;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .g-f-a-name {
                 margin-top: 5px;
                 font-family: 'Courgette', cursive;
                 text-align: center;
@@ -68,9 +75,13 @@ $newMiddleColor: #7AB1FF;
                 line-height: 40px;
                 letter-spacing: 3px;
                 font-weight: 900;
+            }
+
+            .g-f-a-h-name {
+                color: $newMiddleColor;
 
                 .colored-letter {
-                    color: $colorBright;
+                    color: $brighterColor;
                 }
             }
         }
@@ -92,7 +103,6 @@ $newMiddleColor: #7AB1FF;
                 fa-icon {
                     color: $colorBright;
                 }
-
             }
 
             fa-icon {
@@ -101,7 +111,5 @@ $newMiddleColor: #7AB1FF;
                 cursor: pointer;
             }
         }
-
-
     }
 }

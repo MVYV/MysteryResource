@@ -23,6 +23,7 @@ $colorBrightLight: #c28f2c;
             padding: 20px;
             border: 2px solid $colorBright;
             border-top: none;
+            position: relative;
 
             .login-form {
                 width: 100%;
@@ -43,7 +44,7 @@ $colorBrightLight: #c28f2c;
                 }
 
                 .login-form-submit-btn {
-                    margin: 15px 0 10px;
+                    margin: 15px 0 50px;
                     font-family: 'Jura', sans-serif;
                     font-size: 16px;
                     letter-spacing: 1px;
@@ -58,78 +59,86 @@ $colorBrightLight: #c28f2c;
                 }
             }
 
+            .form-footer {
+                position: absolute;
+                left: -2px;
+                right: 0;
+                bottom: -2px;
+                height: 30px;
+
+                .or-box {
+                    width: 50%;
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 25px 2px;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    font-size: 16px;
+                    font-weight: 900;
+                    color: $colorDark;
+                }
+
+                .registration-link {
+                    width: 50%;
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    right: -2px;
+                    background-color: $colorBright;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 25px 2px;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    color: $colorLight;
+                    font-size: 16px;
+                    font-weight: 900;
+                    -webkit-transition: all ease-in-out .3s;
+                    -moz-transition: all ease-in-out .3s;
+                    -ms-transition: all ease-in-out .3s;
+                    -o-transition: all ease-in-out .3s;
+                    transition: all ease-in-out .3s;
+
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: 0;
+                        right: -15px;
+                        border-bottom: 15px solid transparent;
+                        border-top: 15px solid transparent;
+                        border-left: 15px solid $colorBright;
+                        -webkit-transition: all ease-in-out .3s;
+                        -moz-transition: all ease-in-out .3s;
+                        -ms-transition: all ease-in-out .3s;
+                        -o-transition: all ease-in-out .3s;
+                        transition: all ease-in-out .3s;
+
+                        @media screen and (max-width: 530px) {
+                            border: none;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $colorDark;
+
+                        &::after {
+                            border-left-color: $colorDark;
+                        }
+                    }
+                }
+            }
+
             @media screen and (max-width: 500px) {
                 border: none;
-            }
-        }
-
-        .or-box {
-            width: 50%;
-            height: 30px;
-            position: absolute;
-            top: 311px;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 25px 2px;
-            text-align: center;
-            letter-spacing: 1px;
-            font-size: 16px;
-            font-weight: 900;
-            color: $colorDark;
-        }
-
-        .registration-link {
-            width: 50%;
-            height: 30px;
-            position: absolute;
-            top: 311px;
-            right: 0;
-            background-color: $colorBright;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 25px 2px;
-            text-align: center;
-            letter-spacing: 1px;
-            text-decoration: none;
-            color: $colorLight;
-            font-size: 16px;
-            font-weight: 900;
-            -webkit-transition: all ease-in-out .3s;
-            -moz-transition: all ease-in-out .3s;
-            -ms-transition: all ease-in-out .3s;
-            -o-transition: all ease-in-out .3s;
-            transition: all ease-in-out .3s;
-
-            &::after {
-                content: '';
-                width: 0;
-                height: 0;
-                position: absolute;
-                top: 0;
-                right: -15px;
-                border-bottom: 15px solid transparent;
-                border-top: 15px solid transparent;
-                border-left: 15px solid $colorBright;
-                -webkit-transition: all ease-in-out .3s;
-                -moz-transition: all ease-in-out .3s;
-                -ms-transition: all ease-in-out .3s;
-                -o-transition: all ease-in-out .3s;
-                transition: all ease-in-out .3s;
-
-                @media screen and (max-width: 530px) {
-                    border: none;
-                }
-            }
-
-            &:hover {
-                background-color: $colorDark;
-
-                &::after {
-                    border-left-color: $colorDark;
-                }
             }
         }
     }

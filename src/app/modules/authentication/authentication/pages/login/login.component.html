@@ -35,8 +35,10 @@
                         [disabled]="!logInForm.valid">{{ 'LOG_IN' | translate }}
                 </button>
             </form>
+            <div class="form-footer">
+                <div class="or-box">{{ 'OR' | translate }}</div>
+                <a class="registration-link" routerLink="registration">{{ 'REGISTER' | translate }}</a>
+            </div>
         </div>
-        <div class="or-box">{{ 'OR' | translate }}</div>
-        <a class="registration-link" routerLink="registration">{{ 'REGISTER' | translate }}</a>
     </div>
 </div>

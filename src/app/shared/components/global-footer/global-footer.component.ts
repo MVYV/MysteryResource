@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { faFacebookSquare, faTwitterSquare, faLinkedin, faYoutube, faTwitch, faDiscord, faTelegram } from '@fortawesome/fontawesome-free-brands';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'app-global-footer',
@@ -18,6 +19,7 @@ export class GlobalFooterComponent implements OnInit, AfterViewInit, OnDestroy {
     public logoTwitch = faTwitch;
     public logoDiscord = faDiscord;
     public telegramLogo = faTelegram;
+    public mailLogo = faEnvelope;
 
     constructor(private renderer: Renderer2) { }
 
@@ -25,17 +27,17 @@ export class GlobalFooterComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngAfterViewInit(): void {
-        this.hedgehogBox.nativeElement.addEventListener('mouseover', () => {
-            this.renderer.setAttribute(this.hedgehogImg.nativeElement, 'src', '/assets/images/hedgehog_colored.png');
-        });
-        this.hedgehogBox.nativeElement.addEventListener('mouseout', () => {
-            this.renderer.setAttribute(this.hedgehogImg.nativeElement, 'src', '/assets/images/hedgehog_white.png');
-        });
+        // this.hedgehogBox.nativeElement.addEventListener('mouseover', () => {
+        //     this.renderer.setAttribute(this.hedgehogImg.nativeElement, 'src', '/assets/images/hedgehog_colored.png');
+        // });
+        // this.hedgehogBox.nativeElement.addEventListener('mouseout', () => {
+        //     this.renderer.setAttribute(this.hedgehogImg.nativeElement, 'src', '/assets/images/hedgehog_white.png');
+        // });
     }
 
     ngOnDestroy(): void {
-        this.hedgehogImg.nativeElement.removeEventListener('mouseover');
-        this.hedgehogImg.nativeElement.removeEventListener('mouseout');
+        // this.hedgehogImg.nativeElement.removeEventListener('mouseover');
+        // this.hedgehogImg.nativeElement.removeEventListener('mouseout');
     }
 
 }

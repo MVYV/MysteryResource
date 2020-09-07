@@ -31,18 +31,18 @@
                         <span>{{ 'EMAIL_REQUIRED' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
-<!--                <mat-form-field class="registration-form-field">-->
-<!--                    <mat-label class="registration-form-field-label">{{ 'GENDER' | translate }} *</mat-label>-->
-<!--                    <mat-select class="registration-form-field-input" formControlName="genderControl">-->
-<!--                        <mat-option>{{ 'CLEAR' | translate }}</mat-option>-->
-<!--                        <mat-option value="male">{{ 'MALE' | translate }}</mat-option>-->
-<!--                        <mat-option value="female">{{ 'FEMALE' | translate }}</mat-option>-->
-<!--                    </mat-select>-->
-<!--                    <mat-error class="registration-form-field-error"-->
-<!--                               *ngIf="registrationForm.get('genderControl').hasError('required')">-->
-<!--                        <span>{{ 'GENDER_REQUIRED' | translate }}</span>-->
-<!--                    </mat-error>-->
-<!--                </mat-form-field>-->
+                <!--                <mat-form-field class="registration-form-field">-->
+                <!--                    <mat-label class="registration-form-field-label">{{ 'GENDER' | translate }} *</mat-label>-->
+                <!--                    <mat-select class="registration-form-field-input" formControlName="genderControl">-->
+                <!--                        <mat-option>{{ 'CLEAR' | translate }}</mat-option>-->
+                <!--                        <mat-option value="male">{{ 'MALE' | translate }}</mat-option>-->
+                <!--                        <mat-option value="female">{{ 'FEMALE' | translate }}</mat-option>-->
+                <!--                    </mat-select>-->
+                <!--                    <mat-error class="registration-form-field-error"-->
+                <!--                               *ngIf="registrationForm.get('genderControl').hasError('required')">-->
+                <!--                        <span>{{ 'GENDER_REQUIRED' | translate }}</span>-->
+                <!--                    </mat-error>-->
+                <!--                </mat-form-field>-->
                 <mat-form-field class="registration-form-field">
                     <mat-label class="registration-form-field-label">{{ 'DATE_OF_BIRTH' | translate }}</mat-label>
                     <input matInput [matDatepicker]="dp" formControlName="dateOfBirth" readonly required>
@@ -76,8 +76,10 @@
                         [disabled]="!registrationForm.valid">{{ 'REGISTER' | translate }}
                 </button>
             </form>
+            <div class="form-footer">
+                <div class="or-box">{{ 'OR' | translate }}</div>
+                <a class="login-link" routerLink="/login">{{ 'LOG_IN' | translate }}</a>
+            </div>
         </div>
-        <div class="or-box">{{ 'OR' | translate }}</div>
-        <a class="login-link" routerLink="/login">{{ 'LOG_IN' | translate }}</a>
     </div>
 </div>
