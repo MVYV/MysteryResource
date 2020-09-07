@@ -11,6 +11,8 @@
   "REGISTRATION": "Registration",
   "LOG_IN": "Log In",
   "LOG_IN_": "Log In",
+  "LOG_OUT": "Log Out",
+  "PROFILE": "Profile",
   "PASSWORD": "Password",
   "PASSWORD_REQUIRED": "Password is required",
   "PASSWORD_ERROR": "Minimum password length is 10 symbols",

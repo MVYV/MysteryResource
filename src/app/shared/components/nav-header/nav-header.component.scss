@@ -135,8 +135,13 @@ $colorBrightLight: #c28f2c;
     }
 }
 .header-dropdown-login,
-.header-dropdown-registration {
+.header-dropdown-registration,
+.header-dropdown-profile,
+.header-dropdown-logout {
     color: $colorLight;
+}
+.header-dropdown-logout {
+    transform: rotate(180deg);
 }
 .active-dropdown-link {
     background-color: $colorBright;

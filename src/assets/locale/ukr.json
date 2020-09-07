@@ -11,6 +11,8 @@
   "REGISTRATION": "Реєстрація",
   "LOG_IN": "Увійти",
   "LOG_IN_": "Вхід",
+  "LOG_OUT": "Вийти",
+  "PROFILE": "Профіль",
   "PASSWORD": "Пароль",
   "PASSWORD_REQUIRED": "Пароль обов'язковий",
   "PASSWORD_ERROR": "Мінімальна довжина паролю 10 символів",

@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthenticationService } from '../../../../../services/authentication/authentication.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-login',
@@ -22,7 +24,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         ]]
     });
 
-    constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) { }
+    constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService, private router: Router) { }
 
     ngOnInit(): void {
     }
@@ -36,8 +38,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     public submitLogIn(): void {
         this.loginSubscription = this.authenticationService.logIn(this.logInForm.value).subscribe(
             (responseData: any) => {
-                console.log(responseData.headers);
-                this.authenticationService.getDecodedToken();
+                this.router.navigate(['home']).then();
             },
             error => {}
         );

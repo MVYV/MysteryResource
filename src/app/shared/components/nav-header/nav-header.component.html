@@ -34,7 +34,8 @@
         <a class="header-nav-item" mat-button routerLink="tournaments" [routerLinkActive]="'active-header-link'">
             <span class="header-nav-object-name transitionStyle">{{ 'TOURNAMENTS' | translate}}</span>
         </a>
-        <a class="header-nav-item-icon" mat-button routerLink="dashboard" [routerLinkActive]="'active-header-link'">
+        <a *ngIf="checkAdminPermissions()" class="header-nav-item-icon" mat-button routerLink="dashboard"
+           [routerLinkActive]="'active-header-link'">
             <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24">
                 <g fill='#f9f9ea'>
                     <path d="M4 12h4v10H4zM10 4h4v18h-4zM16 8h4v14h-4z"></path>
@@ -49,16 +50,27 @@
             </svg>
         </a>
         <mat-menu #menu="matMenu" class="header-dropdown-menu">
-            <button mat-menu-item routerLink="login" [routerLinkActive]="'active-dropdown-link'"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    class="header-dropdown-item">
-                <mat-icon class="header-dropdown-login">login</mat-icon>
-                {{ 'LOG_IN' | translate }}</button>
-            <button mat-menu-item routerLink="login/registration" [routerLinkActive]="'active-dropdown-link'"
+            <button *ngIf="!checkIsLoggedIn()" mat-menu-item routerLink="login/registration"
+                    [routerLinkActive]="'active-dropdown-link'"
                     [routerLinkActiveOptions]="{ exact: true }"
                     class="header-dropdown-item">
                 <mat-icon class="header-dropdown-registration">person_add</mat-icon>
                 {{ 'REGISTRATION' | translate }}</button>
+            <button *ngIf="!checkIsLoggedIn()" mat-menu-item routerLink="login"
+                    [routerLinkActive]="'active-dropdown-link'"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    class="header-dropdown-item">
+                <mat-icon class="header-dropdown-login">exit_to_app</mat-icon>
+                {{ 'LOG_IN' | translate }}</button>
+            <button *ngIf="checkIsLoggedIn()" mat-menu-item routerLink="login/profile"
+                    [routerLinkActive]="'active-dropdown-link'"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    class="header-dropdown-item">
+                <mat-icon class="header-dropdown-profile">account_circle</mat-icon>
+                {{ 'PROFILE' | translate }}</button>
+            <button *ngIf="checkIsLoggedIn()" mat-menu-item (click)="exitSite()" class="header-dropdown-item">
+                <mat-icon class="header-dropdown-logout">exit_to_app</mat-icon>
+                {{ 'LOG_OUT' | translate }}</button>
         </mat-menu>
     </div>
     <div class="header-language-selector">

@@ -47,7 +47,10 @@ export class AuthenticationService {
     }
 
     private getRole() {
-        return this.getDecodedToken().roles.authority;
+        if (this.isLoggedIn()) {
+            return this.getDecodedToken().roles.authority;
+        }
+        return 'ROLE_ANONYMOUS';
     }
 
     public isAdmin() {
