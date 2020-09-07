@@ -37,7 +37,7 @@ export class AuthenticationService {
         localStorage.setItem('authToken', token);
     }
 
-    public getDecodedToken() {
+    public getDecodedToken(): any {
         const token = this.getToken();
         if (!token) {
             return null;
@@ -46,30 +46,30 @@ export class AuthenticationService {
         return jwtHelper.decodeToken(token);
     }
 
-    private getRole() {
-        if (this.isLoggedIn()) {
-            return this.getDecodedToken().roles.authority;
+    private getRole(): string {
+        if (!this.isLoggedIn()) {
+            return 'ROLE_ANONYMOUS';
         }
-        return 'ROLE_ANONYMOUS';
+        return this.getDecodedToken().roles[0].authority;
     }
 
-    public isAdmin() {
+    public isAdmin(): boolean {
         return this.getRole() === 'ROLE_ADMIN';
     }
 
-    public isAuthor() {
+    public isAuthor(): boolean {
         return this.getRole() === 'ROLE_AUTHOR';
     }
 
-    public isModerator() {
+    public isModerator(): boolean {
         return this.getRole() === 'ROLE_MODERATOR';
     }
 
-    public isUser() {
+    public isUser(): boolean {
         return this.getRole() === 'ROLE_USER';
     }
 
-    public isLoggedIn() {
+    public isLoggedIn(): boolean {
         return !!localStorage.getItem('authToken');
     }
 }

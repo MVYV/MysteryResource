@@ -55,22 +55,34 @@ $colorBrightLight: #c28f2c;
         color: $colorDark;
     }
 }
+
 .sidebar-auth {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     border-top: 1px solid $colorBrightLight;
-    border-bottom: 1px solid $colorBrightLight;
 
     .sidebar-login {
-        padding: 10px 15px 15px 8px;
+        padding: 10px 15px 15px 10px;
     }
 
-    .sidebar-registration {
+    .sidebar-logout {
+        padding: 15px 10px 10px 15px;
+        cursor: pointer;
+    }
+
+    .sidebar-registration,
+    .sidebar-profile {
         padding: 10px 15px 15px 9px;
     }
 
     .sidebar-login,
-    .sidebar-registration {
+    .sidebar-registration,
+    .sidebar-profile,
+    .sidebar-logout {
         color: $colorBrightLight;
         display: flex;
         justify-content: center;
@@ -79,6 +91,12 @@ $colorBrightLight: #c28f2c;
 
         mat-icon {
             font-size: 30px;
+        }
+    }
+
+    .sidebar-logout {
+        mat-icon {
+            transform: rotate(180deg);
         }
     }
 

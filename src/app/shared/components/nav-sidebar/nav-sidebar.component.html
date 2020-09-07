@@ -21,16 +21,27 @@
        (click)="onSideNavClose();" tabindex="-1">{{ 'GAMES' | translate}}</a>
     <a mat-list-item class="global-mat-list-item" routerLink="tournaments" [routerLinkActive]="'active-sidebar-link'"
        (click)="onSideNavClose();" tabindex="-1">{{ 'TOURNAMENTS' | translate}}</a>
-    <a mat-list-item class="global-mat-list-item" routerLink="dashboard" [routerLinkActive]="'active-sidebar-link'"
+    <a mat-list-item class="global-mat-list-item" *ngIf="checkAdminPermissions()" routerLink="dashboard"
+       [routerLinkActive]="'active-sidebar-link'"
        (click)="onSideNavClose();" tabindex="-1">{{ 'DASHBOARD' | translate}}</a>
 </mat-nav-list>
 <div class="sidebar-auth">
-    <a class="sidebar-login" routerLink="login" [routerLinkActive]="'active-sidebar-icon-link'"
-       [routerLinkActiveOptions]="{ exact: true }" (click)="onSideNavClose();">
-        <mat-icon>login</mat-icon>
-    </a>
-    <a class="sidebar-registration" routerLink="login/registration" [routerLinkActive]="'active-sidebar-icon-link'"
+    <a *ngIf="!checkIsLoggedIn()" class="sidebar-registration" routerLink="login/registration"
+       [routerLinkActive]="'active-sidebar-icon-link'"
        [routerLinkActiveOptions]="{ exact: true }" (click)="onSideNavClose();">
         <mat-icon>person_add</mat-icon>
+    </a>
+    <a *ngIf="!checkIsLoggedIn()" class="sidebar-login" routerLink="login"
+       [routerLinkActive]="'active-sidebar-icon-link'"
+       [routerLinkActiveOptions]="{ exact: true }" (click)="onSideNavClose();">
+        <mat-icon>exit_to_app</mat-icon>
+    </a>
+    <a *ngIf="checkIsLoggedIn()" class="sidebar-profile" routerLink="login/profile"
+       [routerLinkActive]="'active-sidebar-icon-link'"
+       [routerLinkActiveOptions]="{ exact: true }" (click)="onSideNavClose();">
+        <mat-icon>account_circle</mat-icon>
+    </a>
+    <a *ngIf="checkIsLoggedIn()" class="sidebar-logout" (click)="onSideNavClose(); exitSite()">
+        <mat-icon>exit_to_app</mat-icon>
     </a>
 </div>

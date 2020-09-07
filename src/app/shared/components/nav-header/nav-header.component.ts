@@ -27,7 +27,7 @@ export class NavHeaderComponent implements OnInit {
 
     public setLanguage(lang: string): void {
         localStorage.setItem('translationLanguage', lang);
-        this.translateService.use(localStorage.getItem('translationLanguage'));
+        this.translateService.use(localStorage.getItem('translationLanguage')).then();
     }
 
     public pageReload(): void {
@@ -35,8 +35,6 @@ export class NavHeaderComponent implements OnInit {
     }
 
     public checkAdminPermissions() {
-        // console.log('isAdmin ' + this.authenticationService.isAdmin());
-        // console.log('isLoggedIn ' + this.authenticationService.isLoggedIn());
         return this.authenticationService.isAdmin();
     }
 
