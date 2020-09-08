@@ -1,9 +1,12 @@
-<p-carousel [value]="homeCarousel" [numVisible]="3" [numScroll]="3" [circular]="true" [autoplayInterval]="5000">
-    <ng-template let-item pTemplate="item">
-        <div class="technology-item">
-            <div class="technology-item-content">
-                <div>{{ item.name }}</div>
-            </div>
+<ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+        <div class="carousel-caption">
+            <h3 style="color:#f9f9ea; font-family: 'Jura', sans-serif;">CyberWe image number {{i + 1}}</h3>
         </div>
+        <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+            <div class="picsum-img-wrapper">
+                <img [src]="img" alt="My image {{i + 1}} description">
+            </div>
+        </a>
     </ng-template>
-</p-carousel>
+</ngb-carousel>

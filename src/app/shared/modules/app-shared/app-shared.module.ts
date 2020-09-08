@@ -6,6 +6,7 @@ import { SharedBoxHeaderComponent } from '../../components/shared-box-header/sha
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function setupTranslateFactory(service: TranslateService): Function {
     return () => service.use('ukr');
@@ -29,14 +30,16 @@ export function setupTranslateFactory(service: TranslateService): Function {
         CommonModule,
         MatIconModule,
         MatButtonModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        NgbModule
     ],
     exports: [
         TranslatePipe,
         SharedBoxHeaderComponent,
         MatIconModule,
         MatButtonModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        NgbModule
     ]
 })
 export class AppSharedModule {
