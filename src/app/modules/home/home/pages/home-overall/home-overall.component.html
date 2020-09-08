@@ -1,4 +1,4 @@
-<ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+<ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
     <ng-template ngbSlide *ngFor="let img of images; index as i">
         <div class="carousel-caption">
             <h3 style="color:#f9f9ea; font-family: 'Jura', sans-serif;">CyberWe image number {{i + 1}}</h3>
