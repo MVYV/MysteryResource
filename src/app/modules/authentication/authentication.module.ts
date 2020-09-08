@@ -7,10 +7,8 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppSharedModule } from '../../shared/modules/app-shared/app-shared.module';
 import { UserProfileComponent } from './authentication/pages/user-profile/user-profile.component';
@@ -22,10 +20,8 @@ import { UserProfileComponent } from './authentication/pages/user-profile/user-p
         AuthenticationRoutingModule,
         MatFormFieldModule,
         MatInputModule,
-        MatButtonModule,
         MatSelectModule,
         MatDatepickerModule,
-        MatIconModule,
         ReactiveFormsModule,
         FormsModule,
         AppSharedModule

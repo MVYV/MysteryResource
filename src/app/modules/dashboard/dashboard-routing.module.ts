@@ -6,6 +6,8 @@ import { DashboardReviewsComponent } from './dashboard/pages/dashboard-reviews/d
 import { DashboardTournamentsComponent } from './dashboard/pages/dashboard-tournaments/dashboard-tournaments.component';
 import { DashboardTechnologiesComponent } from './dashboard/pages/dashboard-technologies/dashboard-technologies.component';
 import { DashboardOverallComponent } from './dashboard/pages/dashboard-overall/dashboard-overall.component';
+import { DashboardUsersComponent } from './dashboard/pages/dashboard-users/dashboard-users.component';
+import { DashboardGhostSiteComponent } from './dashboard/pages/dashboard-ghost-site/dashboard-ghost-site.component';
 
 const dashboardRoutes: Routes = [
     {
@@ -17,6 +19,8 @@ const dashboardRoutes: Routes = [
             { path: 'reviews', component: DashboardReviewsComponent },
             { path: 'tournaments', component: DashboardTournamentsComponent },
             { path: 'technologies', component: DashboardTechnologiesComponent },
+            { path: 'users', component: DashboardUsersComponent },
+            { path: 'ghost', component: DashboardGhostSiteComponent },
         ]
     }
 ];
