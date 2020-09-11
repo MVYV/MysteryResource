@@ -8,7 +8,8 @@ export class TranslateService {
 
     data: any = {};
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) {
+    }
 
     use(lang: string): Promise<{}> {
         return new Promise<{}>((resolve, reject) => {
