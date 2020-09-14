@@ -35,7 +35,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ClarityModule } from '@clr/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -68,8 +67,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         MatMenuModule,
         MatExpansionModule,
         ClarityModule,
-        FontAwesomeModule,
-        NgbModule
+        FontAwesomeModule
     ],
     providers: [],
     exports: [],

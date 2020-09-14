@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GridstackModule } from '@libria/gridstack';
 
 export function setupTranslateFactory(service: TranslateService): Function {
     return () => service.use('ukr');
@@ -31,7 +32,8 @@ export function setupTranslateFactory(service: TranslateService): Function {
         MatIconModule,
         MatButtonModule,
         FontAwesomeModule,
-        NgbModule
+        NgbModule,
+        GridstackModule.forRoot()
     ],
     exports: [
         TranslatePipe,
@@ -39,7 +41,8 @@ export function setupTranslateFactory(service: TranslateService): Function {
         MatIconModule,
         MatButtonModule,
         FontAwesomeModule,
-        NgbModule
+        NgbModule,
+        GridstackModule
     ]
 })
 export class AppSharedModule {
