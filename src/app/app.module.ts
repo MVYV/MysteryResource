@@ -16,11 +16,13 @@ import { ReviewsModule } from './modules/reviews/reviews.module';
 import { TournamentsModule } from './modules/tournaments/tournaments.module';
 import { TechnologiesModule } from './modules/technologies/technologies.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 // Shared components
 import { NavHeaderComponent } from './shared/components/nav-header/nav-header.component';
 import { NavSidebarComponent } from './shared/components/nav-sidebar/nav-sidebar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GlobalFooterComponent } from './shared/components/global-footer/global-footer.component';
 
 // Material modules
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,8 +30,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ClarityModule } from '@clr/angular';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -38,6 +44,7 @@ import { ClarityModule } from '@clr/angular';
         NavHeaderComponent,
         NavSidebarComponent,
         PageNotFoundComponent,
+        GlobalFooterComponent,
     ],
     imports: [
         BrowserModule,
@@ -52,12 +59,17 @@ import { ClarityModule } from '@clr/angular';
         TournamentsModule,
         TechnologiesModule,
         AuthenticationModule,
+        DashboardModule,
         MatToolbarModule,
         MatIconModule,
         MatButtonModule,
         MatSidenavModule,
         MatListModule,
-        ClarityModule
+        MatMenuModule,
+        MatExpansionModule,
+        ClarityModule,
+        FontAwesomeModule,
+        NgbModule
     ],
     providers: [],
     exports: [],

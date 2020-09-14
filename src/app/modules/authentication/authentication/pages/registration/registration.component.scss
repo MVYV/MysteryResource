@@ -1,0 +1,145 @@
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
+.registration-container {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jura', sans-serif;
+
+    .registration-box {
+        width: 500px;
+        background-color: transparent;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+        -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+        position: relative;
+
+        .registration-form-box {
+            padding: 20px;
+            border: 2px solid $colorBright;
+            border-top: none;
+            position: relative;
+
+            .registration-form {
+                width: 100%;
+
+                .registration-form-field {
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    .registration-form-field-label {
+                        color: $colorDark;
+                    }
+
+                    .registration-form-field-error {
+                        font-size: 14px;
+                        padding: 2px;
+                        font-weight: 600;
+                    }
+                }
+
+                .registration-form-submit-btn {
+                    margin: 15px 0 50px;
+                    font-family: 'Jura', sans-serif;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    font-weight: 900;
+                    background-color: $colorDark;
+                    color: $colorLight;
+                    width: 100%;
+
+                    &:disabled {
+                        opacity: .3;
+                    }
+                }
+            }
+
+            .form-footer {
+                position: absolute;
+                left: -2px;
+                right: 0;
+                bottom: -2px;
+                height: 30px;
+
+                .or-box {
+                    width: 50%;
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 25px 2px;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    font-size: 16px;
+                    font-weight: 900;
+                    color: $colorDark;
+                }
+
+                .login-link {
+                    width: 50%;
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: $colorBright;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 25px 2px;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    color: $colorLight;
+                    font-size: 16px;
+                    font-weight: 900;
+                    -webkit-transition: all ease-in-out .3s;
+                    -moz-transition: all ease-in-out .3s;
+                    -ms-transition: all ease-in-out .3s;
+                    -o-transition: all ease-in-out .3s;
+                    transition: all ease-in-out .3s;
+
+                    &::before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: 0;
+                        left: -15px;
+                        border-bottom: 15px solid transparent;
+                        border-top: 15px solid transparent;
+                        border-right: 15px solid $colorBright;
+                        -webkit-transition: all ease-in-out .3s;
+                        -moz-transition: all ease-in-out .3s;
+                        -ms-transition: all ease-in-out .3s;
+                        -o-transition: all ease-in-out .3s;
+                        transition: all ease-in-out .3s;
+
+                        @media screen and (max-width: 530px) {
+                            border: none;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $colorDark;
+
+                        &::before {
+                            border-right-color: $colorDark;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 500px) {
+                border: none;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '../../../services/translate/translate.service';
+import { AuthenticationService } from '../../../services/authentication/authentication.service';
 
 @Component({
     selector: 'app-nav-header',
@@ -9,13 +10,15 @@ import { TranslateService } from '../../../services/translate/translate.service'
 export class NavHeaderComponent implements OnInit {
 
     @Output() public sideNavToggle = new EventEmitter();
+    public userLanguage: string;
 
-    constructor(private translateService: TranslateService) { }
+    constructor(private translateService: TranslateService, private authenticationService: AuthenticationService) { }
 
     ngOnInit(): void {
         localStorage.getItem('translationLanguage')
             ? this.setLanguage(localStorage.getItem('translationLanguage'))
             : this.setLanguage('ukr');
+        this.userLanguage = localStorage.getItem('translationLanguage');
     }
 
     public onToggleSideNav = () => {
@@ -24,11 +27,23 @@ export class NavHeaderComponent implements OnInit {
 
     public setLanguage(lang: string): void {
         localStorage.setItem('translationLanguage', lang);
-        this.translateService.use(localStorage.getItem('translationLanguage'));
+        this.translateService.use(localStorage.getItem('translationLanguage')).then();
     }
 
     public pageReload(): void {
         window.location.reload();
+    }
+
+    public checkAdminPermissions() {
+        return this.authenticationService.isAdmin();
+    }
+
+    public checkIsLoggedIn() {
+        return this.authenticationService.isLoggedIn();
+    }
+
+    public exitSite() {
+        this.authenticationService.logOut();
     }
 
 }

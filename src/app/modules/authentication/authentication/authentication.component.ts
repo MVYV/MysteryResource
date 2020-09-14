@@ -11,7 +11,7 @@ export class AuthenticationComponent implements OnInit {
     constructor(private translateService: TranslateService) { }
 
     ngOnInit(): void {
-        this.translateService.use(localStorage.getItem('translationLanguage'));
+        this.translateService.use(localStorage.getItem('translationLanguage')).then();
     }
 
 }

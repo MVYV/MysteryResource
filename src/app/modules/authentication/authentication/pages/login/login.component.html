@@ -1,0 +1,44 @@
+<div class="login-page-box">
+    <div class="login-box">
+        <app-shared-box-header boxTitle="LOG_IN_"></app-shared-box-header>
+        <div class="login-form-box">
+            <form class="login-form" [formGroup]="logInForm" (ngSubmit)="submitLogIn()">
+                <mat-form-field class="login-form-field">
+                    <mat-label class="login-form-field-label">{{ 'EMAIL' | translate }}</mat-label>
+                    <input class="login-form-field-input" matInput formControlName="email"
+                           placeholder="yourmail@mail.com" required
+                           autocomplete="off">
+                    <mat-error class="login-form-field-error"
+                               *ngIf="logInForm.get('email').hasError('email') && !logInForm.get('email').hasError('required')">
+                        <span>{{ 'EMAIL_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="login-form-field-error"
+                               *ngIf="logInForm.get('email').hasError('required')">
+                        <span>{{ 'EMAIL_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="login-form-field">
+                    <mat-label class="login-form-field-label">{{ 'PASSWORD' | translate }}</mat-label>
+                    <input class="login-form-field-input" matInput type="password" formControlName="password"
+                           placeholder="{{ 'PASSWORD' | translate }}"
+                           minlength="8" required autocomplete="off">
+                    <mat-error class="login-form-field-error"
+                               *ngIf="logInForm.get('password').hasError('minlength') && !logInForm.get('password').hasError('required')">
+                        <span>{{ 'PASSWORD_ERROR' | translate }}</span>
+                    </mat-error>
+                    <mat-error class="login-form-field-error"
+                               *ngIf="logInForm.get('password').hasError('required')">
+                        <span>{{ 'PASSWORD_REQUIRED' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+                <button class="login-form-submit-btn" type="submit" mat-raised-button
+                        [disabled]="!logInForm.valid">{{ 'LOG_IN' | translate }}
+                </button>
+            </form>
+            <div class="form-footer">
+                <div class="or-box">{{ 'OR' | translate }}</div>
+                <a class="registration-link" routerLink="registration">{{ 'REGISTER' | translate }}</a>
+            </div>
+        </div>
+    </div>
+</div>

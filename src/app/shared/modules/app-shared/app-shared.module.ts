@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../../pipes/translate/translate.pipe';
 import { TranslateService } from '../../../services/translate/translate.service';
 import { SharedBoxHeaderComponent } from '../../components/shared-box-header/shared-box-header.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function setupTranslateFactory(service: TranslateService): Function {
     return () => service.use('ukr');
@@ -23,11 +27,19 @@ export function setupTranslateFactory(service: TranslateService): Function {
         }
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MatIconModule,
+        MatButtonModule,
+        FontAwesomeModule,
+        NgbModule
     ],
     exports: [
         TranslatePipe,
-        SharedBoxHeaderComponent
+        SharedBoxHeaderComponent,
+        MatIconModule,
+        MatButtonModule,
+        FontAwesomeModule,
+        NgbModule
     ]
 })
 export class AppSharedModule {

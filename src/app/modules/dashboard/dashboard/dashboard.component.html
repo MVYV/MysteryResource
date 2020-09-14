@@ -1,0 +1,57 @@
+<div class="dashboard-container">
+    <div class="dashboard-nav">
+        <a class="dashboard-nav-item" mat-button routerLink="/dashboard" [routerLinkActive]="'active-dashboard-link'"
+           [routerLinkActiveOptions]="{ exact: true }">
+            <fa-icon [icon]="overallIcon" class="dashboard-nav-object-icon"></fa-icon>
+            <br>
+            <span class="dashboard-nav-object-name transitionStyle">
+                {{ 'OVERALL' | translate }}
+            </span>
+        </a>
+        <a class="dashboard-nav-item" mat-button routerLink="news" [routerLinkActive]="'active-dashboard-link'">
+            <fa-icon [icon]="newsIcon" class="dashboard-nav-object-icon"></fa-icon>
+            <br>
+            <span class="dashboard-nav-object-name transitionStyle">
+                {{ 'NEWS' | translate }}
+            </span>
+        </a>
+        <a class="dashboard-nav-item" mat-button routerLink="technologies" [routerLinkActive]="'active-dashboard-link'">
+            <fa-icon [icon]="techIcon" class="dashboard-nav-object-icon"></fa-icon>
+            <br>
+            <span class="dashboard-nav-object-name transitionStyle">
+                {{ 'TECHNOLOGIES' | translate}}
+            </span>
+        </a>
+        <a class="dashboard-nav-item" mat-button routerLink="reviews" [routerLinkActive]="'active-dashboard-link'">
+            <fa-icon [icon]="gamesIcon" class="dashboard-nav-object-icon"></fa-icon>
+            <br>
+            <span class="dashboard-nav-object-name transitionStyle">
+                {{ 'GAMES' | translate}}
+            </span>
+        </a>
+        <a class="dashboard-nav-item" mat-button routerLink="tournaments" [routerLinkActive]="'active-dashboard-link'">
+            <fa-icon [icon]="tournamentIcon" class="dashboard-nav-object-icon"></fa-icon>
+            <br>
+            <span class="dashboard-nav-object-name transitionStyle">
+                {{ 'TOURNAMENTS' | translate}}
+            </span>
+        </a>
+        <a class="dashboard-nav-item" mat-button routerLink="users" [routerLinkActive]="'active-dashboard-link'">
+            <fa-icon [icon]="usersIcon" class="dashboard-nav-object-icon"></fa-icon>
+            <br>
+            <span class="dashboard-nav-object-name transitionStyle">
+                {{ 'USERS' | translate}}
+            </span>
+        </a>
+        <a class="dashboard-nav-item" mat-button routerLink="ghost" [routerLinkActive]="'active-dashboard-link'">
+            <fa-icon [icon]="ghostIcon" class="dashboard-nav-object-icon"></fa-icon>
+            <br>
+            <span class="dashboard-nav-object-name transitionStyle">
+                {{ 'GHOST_SITE' | translate}}
+            </span>
+        </a>
+    </div>
+    <div class="dashboard-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

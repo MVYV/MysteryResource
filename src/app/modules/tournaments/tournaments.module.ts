@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TournamentsComponent } from './tournaments/tournaments.component';
-import { TournamentsPageComponent } from './tournaments/tournaments-page/tournaments-page.component';
+import { TournamentsPageComponent } from './tournaments/pages/tournaments-page/tournaments-page.component';
 import { TournamentsRoutingModule } from './tournaments-routing.module';
 
 

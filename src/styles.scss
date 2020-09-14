@@ -26,3 +26,88 @@ html, body {
     color: $colorBrightLight !important;
     box-shadow: none !important;
 }
+
+.mat-form-field-wrapper {
+    font-family: 'Jura', sans-serif;
+}
+
+.mat-form-field-flex {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $colorDark;
+}
+
+.mat-form-field-label {
+    color: $colorDark;
+}
+.mat-option-text,
+.mat-select-value {
+    font-family: 'Jura', sans-serif;
+    font-weight: 900;
+}
+.mat-calendar {
+    background-color: $colorLight;
+    font-family: 'Jura', sans-serif;
+}
+.mat-calendar-body-cell-content,
+.mat-calendar-body-label {
+    color: #000000;
+    font-weight: 900;
+}
+.mat-calendar-table-header {
+    th {
+        font-size: 16px;
+        color: #000000;
+        font-weight: 900;
+    }
+}
+.mat-calendar-period-button {
+    font-family: 'Jura', sans-serif;
+    color: #000000;
+    font-weight: 900;
+}
+.mat-calendar-body-selected {
+    background-color: $colorBright;
+    color: $colorLight;
+}
+.mat-calendar-body-today:not(.mat-calendar-body-selected) {
+    border-color: $colorBright;
+}
+.mat-datepicker-toggle-active {
+    color: $colorBright;
+}
+.mat-datepicker-toggle {
+    color: $colorDark;
+}
+.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+    width: 50px;
+    font-size: 22px;
+}
+.mat-form-field-suffix .mat-icon-button:focus {
+    background-color: $colorLight;
+    outline: none;
+}
+.mat-menu-content:not(:empty) {
+    padding: 0 !important;
+}
+.header-dropdown-menu:not(:empty) {
+    background-color: $colorDark;
+    border-radius: 0;
+
+    .header-dropdown-item {
+        color: $colorLight;
+        font-family: 'Jura', sans-serif;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

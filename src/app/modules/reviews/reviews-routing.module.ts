@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ReviewsComponent } from './reviews/reviews.component';
-import { ReviewsPageComponent } from './reviews/reviews-page/reviews-page.component';
+import { ReviewsPageComponent } from './reviews/pages/reviews-page/reviews-page.component';
 
 const reviewsRoutes: Routes = [
     {
