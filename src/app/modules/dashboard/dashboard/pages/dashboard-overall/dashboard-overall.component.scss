@@ -1,4 +1,22 @@
 $colorBright: #f21937;
 $colorLight: #f9f9ea;
 $colorDark: #111111;
+$colorBrightLight: #c28f2c;
 
+.dashboard-overall-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: $colorBrightLight;
+    padding: 20px;
+
+    .gridstack-container {
+        width: 100%;
+        background-color: #7AB1FF;
+        padding: 10px;
+
+        .gridstack-item {
+            margin: 10px;
+            background-color: #f21937;
+        }
+    }
+}
