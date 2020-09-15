@@ -1,10 +1,24 @@
 <div class="dashboard-overall-wrapper">
-    <div lb-gridstack width="5" height="5" class="gridstack-container">
-        <div lb-gridstack-item x="0" y="0" width="3" class="gridstack-item">
-            Widget 1
-        </div>
-        <div lb-gridstack-item x="3" y="0" width="2" class="gridstack-item">
-            Widget 2
+    <div lb-gridstack
+         class="gridstack-container"
+         [width]="gridWidth"
+         [height]="gridHeight"
+         *ngIf="isDashboardWidgetSettingsLoaded"
+         (change)="onGridChange($event)">
+
+        <div lb-gridstack-item
+             class="gridstack-item"
+             [no-move]="noMove"
+             [no-resize]="noResize"
+             *ngFor="let widget of widgetSettings"
+             [x]="widget.x"
+             [y]="widget.y"
+             [width]="widget.width"
+             [height]="widget.height"
+             [id]="widget.id">
+
         </div>
     </div>
 </div>
+
+

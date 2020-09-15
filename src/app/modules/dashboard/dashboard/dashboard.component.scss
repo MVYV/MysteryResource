@@ -13,6 +13,8 @@ $colorDark: #111111;
         background-color: $colorBright;
         display: flex;
         flex-flow: row wrap;
+        position: sticky;
+        top: 80px;
 
         .active-dashboard-link {
             background-color: $colorDark;

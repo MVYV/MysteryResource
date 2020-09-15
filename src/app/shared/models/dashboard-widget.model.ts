@@ -1,6 +1,6 @@
 export class DashboardWidgetModel {
     constructor(
-        public id?: number,
+        public id?: string,
         public x?: number,
         public y?: number,
         public width?: number,

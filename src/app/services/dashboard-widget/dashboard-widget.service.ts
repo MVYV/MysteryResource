@@ -18,9 +18,9 @@ export class DashboardWidgetService {
 
         if (!!widgetSettingsData) {
             const configs = JSON.parse(widgetSettingsData) as DashboardWidgetModel[];
-            setTimeout(() => this.widgetsSettings.next(configs), 3000);
+            setTimeout(() => this.widgetsSettings.next(configs), 1000);
         } else {
-            setTimeout(() => this.widgetsSettings.next([]), 3000);
+            setTimeout(() => this.widgetsSettings.next([]), 1000);
         }
     }
 
