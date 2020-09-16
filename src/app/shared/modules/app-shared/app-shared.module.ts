@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GridstackModule } from '@libria/gridstack';
+import { GlobalFooterComponent } from '../../components/global-footer/global-footer.component';
 
 export function setupTranslateFactory(service: TranslateService): Function {
     return () => service.use('ukr');
@@ -16,7 +17,8 @@ export function setupTranslateFactory(service: TranslateService): Function {
 @NgModule({
     declarations: [
         TranslatePipe,
-        SharedBoxHeaderComponent
+        SharedBoxHeaderComponent,
+        GlobalFooterComponent
     ],
     providers: [
         TranslateService,
@@ -38,6 +40,7 @@ export function setupTranslateFactory(service: TranslateService): Function {
     exports: [
         TranslatePipe,
         SharedBoxHeaderComponent,
+        GlobalFooterComponent,
         MatIconModule,
         MatButtonModule,
         FontAwesomeModule,

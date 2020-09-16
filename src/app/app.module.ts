@@ -22,7 +22,6 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { NavHeaderComponent } from './shared/components/nav-header/nav-header.component';
 import { NavSidebarComponent } from './shared/components/nav-sidebar/nav-sidebar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { GlobalFooterComponent } from './shared/components/global-footer/global-footer.component';
 
 // Material modules
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -43,7 +42,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         NavHeaderComponent,
         NavSidebarComponent,
         PageNotFoundComponent,
-        GlobalFooterComponent,
     ],
     imports: [
         BrowserModule,
