@@ -22,7 +22,6 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { NavHeaderComponent } from './shared/components/nav-header/nav-header.component';
 import { NavSidebarComponent } from './shared/components/nav-sidebar/nav-sidebar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { GlobalFooterComponent } from './shared/components/global-footer/global-footer.component';
 
 // Material modules
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -35,7 +34,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ClarityModule } from '@clr/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -44,7 +42,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         NavHeaderComponent,
         NavSidebarComponent,
         PageNotFoundComponent,
-        GlobalFooterComponent,
     ],
     imports: [
         BrowserModule,
@@ -68,8 +65,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         MatMenuModule,
         MatExpansionModule,
         ClarityModule,
-        FontAwesomeModule,
-        NgbModule
+        FontAwesomeModule
     ],
     providers: [],
     exports: [],

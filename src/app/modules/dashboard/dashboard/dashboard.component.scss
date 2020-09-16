@@ -13,6 +13,8 @@ $colorDark: #111111;
         background-color: $colorBright;
         display: flex;
         flex-flow: row wrap;
+        position: fixed;
+        top: 80px;
 
         .active-dashboard-link {
             background-color: $colorDark;
@@ -64,13 +66,16 @@ $colorDark: #111111;
     .dashboard-content {
         width: calc(100% - 120px);
         min-height: calc(100vh - 80px);
+        margin-left: 120px;
 
         @media screen and (max-width: 1024px) {
             width: calc(100% - 75px);
+            margin-left: 75px;
         }
 
         @media screen and (max-width: 767px) {
             width: calc(100% - 65px);
+            margin-left: 65px;
         }
     }
 }

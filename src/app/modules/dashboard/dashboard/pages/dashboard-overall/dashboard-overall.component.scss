@@ -1,0 +1,19 @@
+$colorBright: #f21937;
+$colorLight: #f9f9ea;
+$colorDark: #111111;
+$colorBrightLight: #c28f2c;
+
+.dashboard-overall-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    padding: 10px 10px 0 10px;
+    margin-bottom: 20px;
+
+    .gridstack-container {
+        width: 100%;
+
+        .gridstack-item {
+        }
+    }
+}
