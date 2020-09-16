@@ -1,8 +1,8 @@
 <div class="dashboard-overall-wrapper">
     <div lb-gridstack
+         [options]="{disableOneColumnMode: true, verticalMargin: 10, cellHeight: 'auto', animate: true}"
          class="gridstack-container"
          [width]="gridWidth"
-         [height]="gridHeight"
          *ngIf="isDashboardWidgetSettingsLoaded"
          (change)="onGridChange($event)">
 
@@ -16,7 +16,12 @@
              [width]="widget.width"
              [height]="widget.height"
              [id]="widget.id">
-
+            <app-widget-one *ngIf="widget.widgetSelector === 'app-widget-one'"></app-widget-one>
+            <app-widget-two *ngIf="widget.widgetSelector === 'app-widget-two'"></app-widget-two>
+            <app-widget-three *ngIf="widget.widgetSelector === 'app-widget-three'"></app-widget-three>
+            <app-widget-four *ngIf="widget.widgetSelector === 'app-widget-four'"></app-widget-four>
+            <app-widget-five *ngIf="widget.widgetSelector === 'app-widget-five'"></app-widget-five>
+            <app-widget-six *ngIf="widget.widgetSelector === 'app-widget-six'"></app-widget-six>
         </div>
     </div>
 </div>

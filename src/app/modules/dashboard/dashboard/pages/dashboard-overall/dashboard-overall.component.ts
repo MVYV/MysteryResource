@@ -6,39 +6,33 @@ import { Item } from '@libria/gridstack';
 const defaultWidgetSettings: DashboardWidgetModel[] = [
     {
         id: 'widget1',
-        width: 1,
-        height: 7,
-        enabled: true
+        width: 2,
+        widgetSelector: 'app-widget-one'
     },
     {
         id: 'widget2',
-        width: 1,
-        height: 7,
-        enabled: true
+        width: 2,
+        widgetSelector: 'app-widget-two'
     },
     {
         id: 'widget3',
-        width: 1,
-        height: 7,
-        enabled: true
+        width: 2,
+        widgetSelector: 'app-widget-three'
     },
     {
         id: 'widget4',
-        width: 1,
-        height: 7,
-        enabled: true
+        width: 2,
+        widgetSelector: 'app-widget-four'
     },
     {
         id: 'widget5',
-        width: 1,
-        height: 7,
-        enabled: true
+        width: 2,
+        widgetSelector: 'app-widget-five'
     },
     {
         id: 'widget6',
-        width: 1,
-        height: 7,
-        enabled: true
+        width: 2,
+        widgetSelector: 'app-widget-six'
     }
 ];
 
@@ -51,9 +45,9 @@ export class DashboardOverallComponent implements OnInit {
 
     public isDashboardWidgetSettingsLoaded = false;
     public widgetSettings: DashboardWidgetModel[] = defaultWidgetSettings;
-    public noMove: boolean;
-    public noResize: boolean;
-    public gridWidth = 3;
+    public noMove = true;
+    public noResize = true;
+    public gridWidth: number;
     public gridHeight = 14;
 
     constructor(private dashboardWidgetService: DashboardWidgetService) {
@@ -79,6 +73,11 @@ export class DashboardOverallComponent implements OnInit {
             if (!item) {
                 return s;
             }
+            if (window.innerWidth <= 1024 && s.width > 1) {
+                item.width = 1;
+            } else if (window.innerWidth > 1024 && window.innerWidth < 1600 && s.width > 2) {
+                item.width = 2;
+            }
             return {
                 ...s,
                 x: item.x,
@@ -91,9 +90,14 @@ export class DashboardOverallComponent implements OnInit {
     }
 
     private setMoveResizePermissions() {
-        if (window.innerWidth <= 1600) {
-            this.noMove = true;
-            this.noResize = true;
+        if (window.innerWidth <= 1024) {
+            this.gridWidth = 1;
+        } else if (window.innerWidth >= 1600) {
+            this.gridWidth = 4;
+            this.noMove = false;
+            this.noResize = false;
+        } else {
+            this.gridWidth = 4;
         }
     }
 }

@@ -5,6 +5,6 @@ export class DashboardWidgetModel {
         public y?: number,
         public width?: number,
         public height?: number,
-        public enabled?: boolean,
+        public widgetSelector?: any
     ) { }
 }

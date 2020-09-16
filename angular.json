@@ -45,7 +45,8 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/jquery-ui-dist/jquery-ui.js",
               "node_modules/gridstack/dist/gridstack.js",
-              "node_modules/gridstack/dist/gridstack.jQueryUI.js"
+              "node_modules/gridstack/dist/gridstack.jQueryUI.js",
+              "node_modules/chart.js/dist/Chart.js"
             ]
           },
           "configurations": {

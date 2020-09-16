@@ -9,7 +9,9 @@ $colorBrightLight: #c28f2c;
     color: $colorLight;
     font-family: 'Jura', sans-serif;
     height: 80px;
-    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 
     .header-menu-icon {
         display: none;

@@ -108,6 +108,10 @@ html, body {
         letter-spacing: 1px;
     }
 }
-
+.grid-stack > .grid-stack-item > .grid-stack-item-content {
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

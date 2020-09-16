@@ -6,15 +6,14 @@ $colorBrightLight: #c28f2c;
 .dashboard-overall-wrapper {
     width: 100%;
     min-height: calc(100vh - 80px);
-    background-color: $colorBrightLight;
-    padding: 20px;
+
+    padding: 10px 10px 0 10px;
+    margin-bottom: 20px;
 
     .gridstack-container {
         width: 100%;
-        background-color: #7AB1FF;
 
         .gridstack-item {
-            background-color: #f21937;
         }
     }
 }
