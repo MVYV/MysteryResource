@@ -5,6 +5,15 @@ import { TranslateService } from '../../../services/translate/translate.service'
 import { SharedBoxHeaderComponent } from '../../components/shared-box-header/shared-box-header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GridstackModule } from '@libria/gridstack';
@@ -33,6 +42,15 @@ export function setupTranslateFactory(service: TranslateService): Function {
         CommonModule,
         MatIconModule,
         MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatDatepickerModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatTableModule,
+        MatCheckboxModule,
+        DragDropModule,
         FontAwesomeModule,
         NgbModule,
         GridstackModule.forRoot()
@@ -43,6 +61,15 @@ export function setupTranslateFactory(service: TranslateService): Function {
         GlobalFooterComponent,
         MatIconModule,
         MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatDatepickerModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatTableModule,
+        MatCheckboxModule,
+        DragDropModule,
         FontAwesomeModule,
         NgbModule,
         GridstackModule

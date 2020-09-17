@@ -34,6 +34,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ClarityModule } from '@clr/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DataTableComponent } from './shared/components/data-table/data-table.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         NavHeaderComponent,
         NavSidebarComponent,
         PageNotFoundComponent,
+        DataTableComponent,
     ],
     imports: [
         BrowserModule,

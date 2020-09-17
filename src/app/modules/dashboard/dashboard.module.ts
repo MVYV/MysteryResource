@@ -17,6 +17,10 @@ import { WidgetThreeComponent } from './dashboard/pages/dashboard-overall/widget
 import { WidgetFourComponent } from './dashboard/pages/dashboard-overall/widgets/widget-four/widget-four.component';
 import { WidgetFiveComponent } from './dashboard/pages/dashboard-overall/widgets/widget-five/widget-five.component';
 import { WidgetSixComponent } from './dashboard/pages/dashboard-overall/widgets/widget-six/widget-six.component';
+import { EditReviewComponent } from './dashboard/pages/dashboard-reviews/components/edit-review/edit-review.component';
+import { DeleteReviewComponent } from './dashboard/pages/dashboard-reviews/components/delete-review/delete-review.component';
+import { AddReviewComponent } from './dashboard/pages/dashboard-reviews/components/add-review/add-review.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
     declarations: [
@@ -33,13 +37,17 @@ import { WidgetSixComponent } from './dashboard/pages/dashboard-overall/widgets/
         WidgetThreeComponent,
         WidgetFourComponent,
         WidgetFiveComponent,
-        WidgetSixComponent
+        WidgetSixComponent,
+        EditReviewComponent,
+        DeleteReviewComponent,
+        AddReviewComponent
     ],
     imports: [
         CommonModule,
         DashboardRoutingModule,
         AppSharedModule,
-        ChartModule
+        ChartModule,
+        MatTableModule
     ]
 })
 export class DashboardModule {
