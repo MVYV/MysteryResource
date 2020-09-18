@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../../pipes/translate/translate.pipe';
 import { TranslateService } from '../../../services/translate/translate.service';
 import { SharedBoxHeaderComponent } from '../../components/shared-box-header/shared-box-header.component';
+import { DataTableComponent } from '../../components/data-table/data-table.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,6 +28,7 @@ export function setupTranslateFactory(service: TranslateService): Function {
     declarations: [
         TranslatePipe,
         SharedBoxHeaderComponent,
+        DataTableComponent,
         GlobalFooterComponent
     ],
     providers: [
@@ -58,6 +60,7 @@ export function setupTranslateFactory(service: TranslateService): Function {
     exports: [
         TranslatePipe,
         SharedBoxHeaderComponent,
+        DataTableComponent,
         GlobalFooterComponent,
         MatIconModule,
         MatButtonModule,

@@ -34,7 +34,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ClarityModule } from '@clr/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DataTableComponent } from './shared/components/data-table/data-table.component';
 
 
 @NgModule({
@@ -42,8 +41,7 @@ import { DataTableComponent } from './shared/components/data-table/data-table.co
         AppComponent,
         NavHeaderComponent,
         NavSidebarComponent,
-        PageNotFoundComponent,
-        DataTableComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
@@ -70,7 +68,9 @@ import { DataTableComponent } from './shared/components/data-table/data-table.co
         FontAwesomeModule
     ],
     providers: [],
-    exports: [],
+    exports: [
+
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
