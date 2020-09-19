@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 
 @Component({
     selector: 'app-data-table',
@@ -13,8 +14,8 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 })
 export class DataTableComponent implements OnInit, AfterViewInit {
 
-    @Input() public displayedColumns: any[];
-    @Input() public displayedData: any[];
+    @Input() public displayedColumns: string[];
+    @Input() public displayedData: ReviewModel[];
 
     selection = new SelectionModel<any>(true, []);
     dataSource: MatTableDataSource<ReviewModel>;
@@ -22,7 +23,7 @@ export class DataTableComponent implements OnInit, AfterViewInit {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    constructor() {
+    constructor(private bottomSheet: MatBottomSheet) {
         this.dataSource = new MatTableDataSource(this.displayedData);
     }
 
@@ -34,30 +35,35 @@ export class DataTableComponent implements OnInit, AfterViewInit {
         this.dataSource.sort = this.sort;
     }
 
-    drop(event: CdkDragDrop<string[]>) {
+    public openBottomSheet(): void {
+        this.bottomSheet.open(DataTableActionsComponent);
+    }
+
+    public drop(event: CdkDragDrop<string[]>): void {
         moveItemInArray(this.displayedColumns, event.previousIndex, event.currentIndex);
     }
 
-    isAllSelected() {
+    public isAllSelected(): boolean {
         const numSelected = this.selection.selected.length;
         const numRows = this.dataSource.data.length;
         return numSelected === numRows;
     }
 
-    masterToggle() {
+    public masterToggle(): void {
         this.isAllSelected() ?
             this.selection.clear() :
             this.dataSource.data.forEach(row => this.selection.select(row));
     }
 
-    checkboxLabel(row?: any): string {
+    public checkboxLabel(row?: any): string {
         if (!row) {
             return `${ this.isAllSelected() ? 'select' : 'deselect' } all`;
         }
+        console.log(row);
         return `${ this.selection.isSelected(row) ? 'deselect' : 'select' } row ${ row.position + 1 }`;
     }
 
-    public applyFilter(event: Event) {
+    public applyFilter(event: Event): void {
         const filterValue = (event.target as HTMLInputElement).value;
         this.dataSource.filter = filterValue.trim().toLowerCase();
 
@@ -66,4 +72,18 @@ export class DataTableComponent implements OnInit, AfterViewInit {
         }
     }
 
+}
+
+@Component({
+    selector: 'app-data-table-actions',
+    templateUrl: './data-table-actions.component.html',
+    styleUrls: ['./data-table.component.scss']
+})
+export class DataTableActionsComponent {
+    constructor(private bottomSheetRef: MatBottomSheetRef<DataTableActionsComponent>) {}
+
+    public openLink(event: MouseEvent): void {
+        this.bottomSheetRef.dismiss();
+        event.preventDefault();
+    }
 }

@@ -41,7 +41,7 @@ export class DashboardReviewsComponent implements OnInit, AfterViewInit, OnDestr
             },
             () => {
                 for (const key in this.reviewsList[0]) {
-                    if (this.reviewsList[0].hasOwnProperty(key)) {
+                    if (this.reviewsList[0].hasOwnProperty(key) && key !== 'id') {
                         this.displayedColumnsList.push(key);
                     }
                 }
